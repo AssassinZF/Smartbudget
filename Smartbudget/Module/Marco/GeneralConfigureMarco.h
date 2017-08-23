@@ -44,10 +44,10 @@
 #define RandomColor \
 [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:\arc4random_uniform(256)/255.0 alpha:1.0]
 
-////弱引用/强引用
-//#define WeakSelf(type) __weak typeof(type) weak##type = type;
-//#define StrongSelf(type)  __strong typeof(type) type = weak##type;
-//
+//弱引用/强引用
+#define WeakSelf(type) __weak typeof(type) weak##type = type;
+#define StrongSelf(type) __strong typeof(type) type = weak##type;
+
 ////设置 view 圆角和边框
 //#define LRViewBorderRadius(View, Radius, Width, Color)\
 //\

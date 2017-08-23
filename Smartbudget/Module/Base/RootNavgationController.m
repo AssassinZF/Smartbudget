@@ -20,7 +20,8 @@
     self.navigationBar.barTintColor = [AppSettingDefault share].themeColor;
     self.navigationBar.translucent = NO;
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
-    
+    self.navigationBar.barStyle = UIStatusBarStyleLightContent;
+
 
 }
 

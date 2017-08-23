@@ -11,6 +11,8 @@
 
 //pod
 #import <YYCategories.h>
+#import <Masonry.h>
+#import <FMDB.h>
 
 //Marco.h
 #import "GeneralConfigureMarco.h"

@@ -24,6 +24,5 @@
 }
 
 -(void)projectConfigure{
-    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
 }
 @end

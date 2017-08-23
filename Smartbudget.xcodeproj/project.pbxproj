@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54E1ACDF1F4D7DFA009A3FCE /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E1ACDC1F4D7DFA009A3FCE /* MainViewController.m */; };
+		54E1ACE31F4D7E26009A3FCE /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E1ACE11F4D7E26009A3FCE /* MainTableViewCell.m */; };
+		54E1ACE41F4D7E26009A3FCE /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54E1ACE21F4D7E26009A3FCE /* MainTableViewCell.xib */; };
+		54E1ACE71F4D7F75009A3FCE /* BudgetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E1ACE61F4D7F75009A3FCE /* BudgetModel.m */; };
+		54E1ACEA1F4D806A009A3FCE /* DataBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E1ACE91F4D806A009A3FCE /* DataBaseManager.m */; };
 		AB066D631F4D25D400378D80 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB066D621F4D25D400378D80 /* main.m */; };
 		AB066D661F4D25D400378D80 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB066D651F4D25D400378D80 /* AppDelegate.m */; };
 		AB066D6C1F4D25D400378D80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB066D6A1F4D25D400378D80 /* Main.storyboard */; };
@@ -17,7 +22,6 @@
 		AB066DA11F4D2B7900378D80 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB066DA01F4D2B7900378D80 /* RootViewController.m */; };
 		AB066DA41F4D2B9B00378D80 /* RootNavgationController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB066DA31F4D2B9B00378D80 /* RootNavgationController.m */; };
 		AB066DA71F4D2BAF00378D80 /* RootView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB066DA61F4D2BAF00378D80 /* RootView.m */; };
-		AB066DAA1F4D2C9500378D80 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB066DA91F4D2C9500378D80 /* MainViewController.m */; };
 		AB066DAD1F4D2D4D00378D80 /* AppSettingDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = AB066DAC1F4D2D4D00378D80 /* AppSettingDefault.m */; };
 		AB066DB11F4D333500378D80 /* UIColor+AppConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = AB066DB01F4D333500378D80 /* UIColor+AppConfigure.m */; };
 		BE4EAB8AA4811DDDF1EDF155 /* libPods-SmartbudgetTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C7135A583FE9612404C3097 /* libPods-SmartbudgetTests.a */; };
@@ -44,6 +48,15 @@
 
 /* Begin PBXFileReference section */
 		3F5876C7E300AF0C6F60B7A1 /* libPods-SmartbudgetUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SmartbudgetUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		54E1ACDB1F4D7DFA009A3FCE /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		54E1ACDC1F4D7DFA009A3FCE /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		54E1ACE01F4D7E26009A3FCE /* MainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewCell.h; sourceTree = "<group>"; };
+		54E1ACE11F4D7E26009A3FCE /* MainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewCell.m; sourceTree = "<group>"; };
+		54E1ACE21F4D7E26009A3FCE /* MainTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
+		54E1ACE51F4D7F75009A3FCE /* BudgetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BudgetModel.h; sourceTree = "<group>"; };
+		54E1ACE61F4D7F75009A3FCE /* BudgetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BudgetModel.m; sourceTree = "<group>"; };
+		54E1ACE81F4D806A009A3FCE /* DataBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataBaseManager.h; sourceTree = "<group>"; };
+		54E1ACE91F4D806A009A3FCE /* DataBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataBaseManager.m; sourceTree = "<group>"; };
 		6AF6717AE812B27AEA7C80C4 /* libPods-Smartbudget.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Smartbudget.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BD6083850259A8C7654250B /* Pods-SmartbudgetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartbudgetTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartbudgetTests/Pods-SmartbudgetTests.release.xcconfig"; sourceTree = "<group>"; };
 		7187276B38189629F56F845A /* Pods-SmartbudgetUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartbudgetUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartbudgetUITests/Pods-SmartbudgetUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -71,8 +84,6 @@
 		AB066DA31F4D2B9B00378D80 /* RootNavgationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootNavgationController.m; sourceTree = "<group>"; };
 		AB066DA51F4D2BAF00378D80 /* RootView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootView.h; sourceTree = "<group>"; };
 		AB066DA61F4D2BAF00378D80 /* RootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootView.m; sourceTree = "<group>"; };
-		AB066DA81F4D2C9500378D80 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		AB066DA91F4D2C9500378D80 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		AB066DAB1F4D2D4D00378D80 /* AppSettingDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppSettingDefault.h; sourceTree = "<group>"; };
 		AB066DAC1F4D2D4D00378D80 /* AppSettingDefault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppSettingDefault.m; sourceTree = "<group>"; };
 		AB066DAE1F4D2E4D00378D80 /* GeneralConfigureMarco.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralConfigureMarco.h; sourceTree = "<group>"; };
@@ -131,6 +142,34 @@
 				3F5876C7E300AF0C6F60B7A1 /* libPods-SmartbudgetUITests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		54E1ACDA1F4D7DFA009A3FCE /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				54E1ACDB1F4D7DFA009A3FCE /* MainViewController.h */,
+				54E1ACDC1F4D7DFA009A3FCE /* MainViewController.m */,
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
+		54E1ACDD1F4D7DFA009A3FCE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				54E1ACE51F4D7F75009A3FCE /* BudgetModel.h */,
+				54E1ACE61F4D7F75009A3FCE /* BudgetModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		54E1ACDE1F4D7DFA009A3FCE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				54E1ACE01F4D7E26009A3FCE /* MainTableViewCell.h */,
+				54E1ACE11F4D7E26009A3FCE /* MainTableViewCell.m */,
+				54E1ACE21F4D7E26009A3FCE /* MainTableViewCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		AB066D551F4D25D400378D80 = {
@@ -230,8 +269,9 @@
 		AB066D971F4D296E00378D80 /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				AB066DA81F4D2C9500378D80 /* MainViewController.h */,
-				AB066DA91F4D2C9500378D80 /* MainViewController.m */,
+				54E1ACDA1F4D7DFA009A3FCE /* Control */,
+				54E1ACDD1F4D7DFA009A3FCE /* Model */,
+				54E1ACDE1F4D7DFA009A3FCE /* View */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -285,6 +325,8 @@
 			children = (
 				AB066DAB1F4D2D4D00378D80 /* AppSettingDefault.h */,
 				AB066DAC1F4D2D4D00378D80 /* AppSettingDefault.m */,
+				54E1ACE81F4D806A009A3FCE /* DataBaseManager.h */,
+				54E1ACE91F4D806A009A3FCE /* DataBaseManager.m */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -406,6 +448,7 @@
 			files = (
 				AB066D711F4D25D400378D80 /* LaunchScreen.storyboard in Resources */,
 				AB066D6E1F4D25D400378D80 /* Assets.xcassets in Resources */,
+				54E1ACE41F4D7E26009A3FCE /* MainTableViewCell.xib in Resources */,
 				AB066D6C1F4D25D400378D80 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -469,7 +512,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		3EC064B227B16E8A70788148 /* [CP] Check Pods Manifest.lock */ = {
@@ -484,7 +527,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		4145B0E59B13A225A7C21334 /* [CP] Check Pods Manifest.lock */ = {
@@ -499,7 +542,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		441654F617B297DEAD4F5F47 /* [CP] Copy Pods Resources */ = {
@@ -570,12 +613,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB066D661F4D25D400378D80 /* AppDelegate.m in Sources */,
-				AB066DAA1F4D2C9500378D80 /* MainViewController.m in Sources */,
 				AB066DAD1F4D2D4D00378D80 /* AppSettingDefault.m in Sources */,
 				AB066D631F4D25D400378D80 /* main.m in Sources */,
+				54E1ACE31F4D7E26009A3FCE /* MainTableViewCell.m in Sources */,
+				54E1ACDF1F4D7DFA009A3FCE /* MainViewController.m in Sources */,
 				AB066DB11F4D333500378D80 /* UIColor+AppConfigure.m in Sources */,
+				54E1ACEA1F4D806A009A3FCE /* DataBaseManager.m in Sources */,
 				AB066DA11F4D2B7900378D80 /* RootViewController.m in Sources */,
 				AB066DA41F4D2B9B00378D80 /* RootNavgationController.m in Sources */,
+				54E1ACE71F4D7F75009A3FCE /* BudgetModel.m in Sources */,
 				AB066DA71F4D2BAF00378D80 /* RootView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
