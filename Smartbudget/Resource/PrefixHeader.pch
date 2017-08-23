@@ -1,0 +1,19 @@
+//
+//  PrefixHeader.pch
+//  Smartbudget
+//
+//  Created by Daisy on 2017/8/23.
+//  Copyright © 2017年 zf. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+//pod
+#import <YYCategories.h>
+
+//Marco.h
+#import "GeneralConfigureMarco.h"
+
+
+#endif /* PrefixHeader_pch */
