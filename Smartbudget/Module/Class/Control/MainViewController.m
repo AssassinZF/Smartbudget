@@ -11,6 +11,7 @@
 #import "MainTableViewCell.h"
 
 static NSString * const cellID = @"CELLID";
+static CGFloat cellHeight = 80;
 
 @interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong)NSMutableArray *dataArray;
@@ -46,6 +47,9 @@ static NSString * const cellID = @"CELLID";
         _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
+        _tableView.rowHeight = cellHeight;
+        _tableView.showsVerticalScrollIndicator = NO;
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([MainTableViewCell class]) bundle:nil] forCellReuseIdentifier:cellID];
     }
     return _tableView;
