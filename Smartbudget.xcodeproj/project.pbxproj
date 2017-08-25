@@ -12,6 +12,8 @@
 		54E1ACE41F4D7E26009A3FCE /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54E1ACE21F4D7E26009A3FCE /* MainTableViewCell.xib */; };
 		54E1ACE71F4D7F75009A3FCE /* BudgetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E1ACE61F4D7F75009A3FCE /* BudgetModel.m */; };
 		54E1ACEA1F4D806A009A3FCE /* DataBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E1ACE91F4D806A009A3FCE /* DataBaseManager.m */; };
+		54E1ACEE1F4EB49A009A3FCE /* AddBudgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E1ACEC1F4EB49A009A3FCE /* AddBudgetViewController.m */; };
+		54E1ACEF1F4EB49A009A3FCE /* AddBudgetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54E1ACED1F4EB49A009A3FCE /* AddBudgetViewController.xib */; };
 		AB066D631F4D25D400378D80 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB066D621F4D25D400378D80 /* main.m */; };
 		AB066D661F4D25D400378D80 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB066D651F4D25D400378D80 /* AppDelegate.m */; };
 		AB066D6C1F4D25D400378D80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB066D6A1F4D25D400378D80 /* Main.storyboard */; };
@@ -57,6 +59,9 @@
 		54E1ACE61F4D7F75009A3FCE /* BudgetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BudgetModel.m; sourceTree = "<group>"; };
 		54E1ACE81F4D806A009A3FCE /* DataBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataBaseManager.h; sourceTree = "<group>"; };
 		54E1ACE91F4D806A009A3FCE /* DataBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataBaseManager.m; sourceTree = "<group>"; };
+		54E1ACEB1F4EB49A009A3FCE /* AddBudgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddBudgetViewController.h; sourceTree = "<group>"; };
+		54E1ACEC1F4EB49A009A3FCE /* AddBudgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddBudgetViewController.m; sourceTree = "<group>"; };
+		54E1ACED1F4EB49A009A3FCE /* AddBudgetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddBudgetViewController.xib; sourceTree = "<group>"; };
 		6AF6717AE812B27AEA7C80C4 /* libPods-Smartbudget.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Smartbudget.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BD6083850259A8C7654250B /* Pods-SmartbudgetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartbudgetTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartbudgetTests/Pods-SmartbudgetTests.release.xcconfig"; sourceTree = "<group>"; };
 		7187276B38189629F56F845A /* Pods-SmartbudgetUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartbudgetUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartbudgetUITests/Pods-SmartbudgetUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -149,6 +154,9 @@
 			children = (
 				54E1ACDB1F4D7DFA009A3FCE /* MainViewController.h */,
 				54E1ACDC1F4D7DFA009A3FCE /* MainViewController.m */,
+				54E1ACEB1F4EB49A009A3FCE /* AddBudgetViewController.h */,
+				54E1ACEC1F4EB49A009A3FCE /* AddBudgetViewController.m */,
+				54E1ACED1F4EB49A009A3FCE /* AddBudgetViewController.xib */,
 			);
 			path = Control;
 			sourceTree = "<group>";
@@ -450,6 +458,7 @@
 				AB066D6E1F4D25D400378D80 /* Assets.xcassets in Resources */,
 				54E1ACE41F4D7E26009A3FCE /* MainTableViewCell.xib in Resources */,
 				AB066D6C1F4D25D400378D80 /* Main.storyboard in Resources */,
+				54E1ACEF1F4EB49A009A3FCE /* AddBudgetViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -623,6 +632,7 @@
 				AB066DA41F4D2B9B00378D80 /* RootNavgationController.m in Sources */,
 				54E1ACE71F4D7F75009A3FCE /* BudgetModel.m in Sources */,
 				AB066DA71F4D2BAF00378D80 /* RootView.m in Sources */,
+				54E1ACEE1F4EB49A009A3FCE /* AddBudgetViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

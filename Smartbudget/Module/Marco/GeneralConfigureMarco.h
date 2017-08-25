@@ -48,12 +48,6 @@
 #define WeakSelf(type) __weak typeof(type) weak##type = type;
 #define StrongSelf(type) __strong typeof(type) type = weak##type;
 
-////设置 view 圆角和边框
-//#define LRViewBorderRadius(View, Radius, Width, Color)\
-//\
-//[View.layer setCornerRadius:(Radius)];\
-//[View.layer setMasksToBounds:YES];\
-//[View.layer setBorderWidth:(Width)];\
-//[View.layer setBorderColor:[Color CGColor]]
+#define DocumentPath NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject
 
 #endif /* GeneralConfigureMarco_h */

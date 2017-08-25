@@ -10,6 +10,8 @@ target 'Smartbudget' do
 pod 'YYCategories'
 pod 'Masonry', '~> 1.0.2'
 pod 'FMDB'
+pod 'pop'
+
 
   target 'SmartbudgetTests' do
     inherit! :search_paths
