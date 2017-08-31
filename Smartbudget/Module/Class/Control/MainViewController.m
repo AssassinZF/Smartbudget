@@ -9,16 +9,27 @@
 #import "MainViewController.h"
 #import "UIColor+AppConfigure.h"
 #import "MainTableViewCell.h"
+#import "AppSettingDefault.h"
+#import "AddBudgetViewController.h"
 
 static NSString * const cellID = @"CELLID";
 static CGFloat cellHeight = 80;
+static CGFloat addButtonW = 50;
 
 @interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
+{
+    UIButton *addButton;//加号
+}
 @property (nonatomic, strong)NSMutableArray *dataArray;
 @property (nonatomic, strong)UITableView *tableView;
 @end
 
 @implementation MainViewController
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self animationShowAddButton];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,13 +38,20 @@ static CGFloat cellHeight = 80;
 
 -(void)initUI{
     self.title = @"SmartBudget";
-    self.view.backgroundColor = [UIColor whiteColor];
     
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view).with.insets(UIEdgeInsetsMake(0, 0, 0, 0));
     }];
     
+    addButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    addButton.backgroundColor = [AppSettingDefault share].themeColor;
+    addButton.size = CGSizeMake(1, 1);
+    addButton.centerX = self.view.centerX;
+    addButton.centerY = self.view.height - addButtonW/2 - 40 - NavBar_H;
+    addButton.layer.cornerRadius = 0.5;
+    [addButton addTarget:self action:@selector(clickAddOrder) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:addButton];
 
 }
 
@@ -41,6 +59,7 @@ static CGFloat cellHeight = 80;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 -(UITableView *)tableView{
     if (!_tableView) {
@@ -70,4 +89,25 @@ static CGFloat cellHeight = 80;
     MainTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:cellID];
     return cell;
 }
+
+#pragma mark - PriveMethod
+
+-(void)clickAddOrder{
+    AddBudgetViewController *add = [[AddBudgetViewController alloc] init];
+    [self presentViewController:add animated:YES completion:^{
+        
+    }];
+}
+
+-(void)animationShowAddButton{
+    POPSpringAnimation *spring = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerScaleXY];
+    spring.beginTime = CACurrentMediaTime() + 0.5;
+    spring.springSpeed = 5;
+    spring.springBounciness = 10;
+    spring.toValue = [NSValue valueWithCGPoint:CGPointMake(addButtonW, addButtonW)];
+    [addButton.layer pop_addAnimation:spring forKey:nil];
+    [addButton setImage:[UIImage imageNamed:@"addicon"] forState:UIControlStateNormal];
+
+}
+
 @end

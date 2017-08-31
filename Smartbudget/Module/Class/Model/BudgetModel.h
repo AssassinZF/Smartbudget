@@ -7,26 +7,31 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "JKDBModel.h"
 
 typedef NS_ENUM(NSInteger,OutlayType){
-    OutlayTypeDefault = 0,
+    OutlayTypeGeneral = 0,//一般
     OutlayTypeDine,//用餐
     OutlayTypeDrink,//饮料
     OutlayTypeTraffic,//交通
     OutlayTypeMoive,//电影
+    OutlayTypeShopping,//购物
+    OutlayTypeMoiveStay,//住宿
+    OutlayTypeGift,//礼物
 };
 
-@interface BudgetModel : NSObject
+@interface BudgetModel : JKDBModel
 @property(nonatomic,copy)NSString *budgetName;
 @property(nonatomic,copy)NSString *creatTime;
 @property(nonatomic,copy)NSString *modifyTime;
 @property(nonatomic,assign)CGFloat budgetMoney;//总预算
-@property(nonatomic,assign)CGFloat outlayMoney;//话费金额
+@property(nonatomic,assign)CGFloat outlayMoney;//支出总金额
 @end
 
-@interface OutlayModel : NSObject
-@property(nonatomic,copy)NSString *outlayName;
+@interface OrderModel : JKDBModel
+@property(nonatomic,copy)NSString *orderName;
+@property (nonatomic, assign)OutlayType orderType;//订单类型
 @property(nonatomic,copy)NSString *creatTime;
-@property(nonatomic,assign)CGFloat outlayNumber;//单次支出金额
+@property(nonatomic,assign)CGFloat orderNumber;//订单支出金额
 
 @end

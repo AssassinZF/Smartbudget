@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		540E2CF61F57F15A00A8D85F /* JKDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 540E2CF31F57F15A00A8D85F /* JKDBHelper.m */; };
+		540E2CF71F57F15A00A8D85F /* JKDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 540E2CF51F57F15A00A8D85F /* JKDBModel.m */; };
 		54E1ACDF1F4D7DFA009A3FCE /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E1ACDC1F4D7DFA009A3FCE /* MainViewController.m */; };
 		54E1ACE31F4D7E26009A3FCE /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E1ACE11F4D7E26009A3FCE /* MainTableViewCell.m */; };
 		54E1ACE41F4D7E26009A3FCE /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54E1ACE21F4D7E26009A3FCE /* MainTableViewCell.xib */; };
@@ -50,6 +52,10 @@
 
 /* Begin PBXFileReference section */
 		3F5876C7E300AF0C6F60B7A1 /* libPods-SmartbudgetUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SmartbudgetUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		540E2CF21F57F15A00A8D85F /* JKDBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKDBHelper.h; sourceTree = "<group>"; };
+		540E2CF31F57F15A00A8D85F /* JKDBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKDBHelper.m; sourceTree = "<group>"; };
+		540E2CF41F57F15A00A8D85F /* JKDBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKDBModel.h; sourceTree = "<group>"; };
+		540E2CF51F57F15A00A8D85F /* JKDBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKDBModel.m; sourceTree = "<group>"; };
 		54E1ACDB1F4D7DFA009A3FCE /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		54E1ACDC1F4D7DFA009A3FCE /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		54E1ACE01F4D7E26009A3FCE /* MainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewCell.h; sourceTree = "<group>"; };
@@ -149,6 +155,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		540E2CF01F57F15A00A8D85F /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				540E2CF11F57F15A00A8D85F /* DBModel */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		540E2CF11F57F15A00A8D85F /* DBModel */ = {
+			isa = PBXGroup;
+			children = (
+				540E2CF21F57F15A00A8D85F /* JKDBHelper.h */,
+				540E2CF31F57F15A00A8D85F /* JKDBHelper.m */,
+				540E2CF41F57F15A00A8D85F /* JKDBModel.h */,
+				540E2CF51F57F15A00A8D85F /* JKDBModel.m */,
+			);
+			path = DBModel;
+			sourceTree = "<group>";
+		};
+		540E2CF81F57F27200A8D85F /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
 		54E1ACDA1F4D7DFA009A3FCE /* Control */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,13 +202,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		54E1ACDE1F4D7DFA009A3FCE /* View */ = {
+		54E1ACDE1F4D7DFA009A3FCE /* Cell */ = {
 			isa = PBXGroup;
 			children = (
 				54E1ACE01F4D7E26009A3FCE /* MainTableViewCell.h */,
 				54E1ACE11F4D7E26009A3FCE /* MainTableViewCell.m */,
 				54E1ACE21F4D7E26009A3FCE /* MainTableViewCell.xib */,
 			);
+			name = Cell;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -205,7 +238,7 @@
 		AB066D601F4D25D400378D80 /* Smartbudget */ = {
 			isa = PBXGroup;
 			children = (
-				AB066D9B1F4D296E00378D80 /* Vender */,
+				540E2CF01F57F15A00A8D85F /* lib */,
 				AB066D941F4D296E00378D80 /* AppDelegate */,
 				AB066D951F4D296E00378D80 /* Module */,
 				AB066D9A1F4D296E00378D80 /* Resource */,
@@ -277,9 +310,10 @@
 		AB066D971F4D296E00378D80 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				540E2CF81F57F27200A8D85F /* CustomView */,
 				54E1ACDA1F4D7DFA009A3FCE /* Control */,
 				54E1ACDD1F4D7DFA009A3FCE /* Model */,
-				54E1ACDE1F4D7DFA009A3FCE /* View */,
+				54E1ACDE1F4D7DFA009A3FCE /* Cell */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -312,13 +346,6 @@
 				AB066D9D1F4D29EA00378D80 /* PrefixHeader.pch */,
 			);
 			path = Resource;
-			sourceTree = "<group>";
-		};
-		AB066D9B1F4D296E00378D80 /* Vender */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Vender;
 			sourceTree = "<group>";
 		};
 		AB066D9C1F4D29AE00378D80 /* Image */ = {
@@ -622,8 +649,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB066D661F4D25D400378D80 /* AppDelegate.m in Sources */,
+				540E2CF61F57F15A00A8D85F /* JKDBHelper.m in Sources */,
 				AB066DAD1F4D2D4D00378D80 /* AppSettingDefault.m in Sources */,
 				AB066D631F4D25D400378D80 /* main.m in Sources */,
+				540E2CF71F57F15A00A8D85F /* JKDBModel.m in Sources */,
 				54E1ACE31F4D7E26009A3FCE /* MainTableViewCell.m in Sources */,
 				54E1ACDF1F4D7DFA009A3FCE /* MainViewController.m in Sources */,
 				AB066DB11F4D333500378D80 /* UIColor+AppConfigure.m in Sources */,

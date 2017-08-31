@@ -11,3 +11,7 @@
 @implementation BudgetModel
 
 @end
+
+@implementation OrderModel
+
+@end

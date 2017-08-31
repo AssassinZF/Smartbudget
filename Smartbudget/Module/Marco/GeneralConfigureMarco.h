@@ -50,4 +50,6 @@
 
 #define DocumentPath NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject
 
+#define NavBar_H self.navigationController.navigationBar.height
+
 #endif /* GeneralConfigureMarco_h */
