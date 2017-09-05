@@ -29,6 +29,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SCLAlertView-Objective-C.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SVProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>YYCategories.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,22 +57,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4330AB44DDC919A0D8643007644C93FC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>50EB36A1815B92116FE633EDA66B3828</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6B2A7B66ED06268C8EA6F1556F445C28</key>
+		<key>62E8A207216BE3248199EEB97A4674D3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>6EAAAE9B5047FA1C299BF62A4A172940</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7482D762DF252CBABC2B9D5F87AF9B01</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>75C084D8358AF5E4EE8501AA33AE7EA0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>76D37C4C28219800AF01F8DBB63E7D34</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -73,6 +88,11 @@
 			<true/>
 		</dict>
 		<key>9DC8D9E02903E93BD0B2FEC9D846EA20</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DA97F4A753F285E5413ABB0E6EB5D1A7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

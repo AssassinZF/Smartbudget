@@ -7,6 +7,8 @@
 //
 
 #import "AddBudgetViewController.h"
+#import "AppSettingDefault.h"
+#import "BudgetModel.h"
 
 @interface AddBudgetViewController ()
 @property (weak, nonatomic) IBOutlet UIView *downTextFieldView;
@@ -22,7 +24,7 @@
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    [self showAnimationView];
+//    [self showAnimationView];
 }
 
 - (void)viewDidLoad {
@@ -43,6 +45,26 @@
     [self.topTextFieldView.layer pop_addAnimation:[self springAnimation:self.topTextFieldView.centerY] forKey:@"1"];
     [self.downTextFieldView.layer pop_addAnimation:[self springAnimation:self.downTextFieldView.centerY] forKey:@"2"];
     [self.completeButton.layer pop_addAnimation:[self springAnimation:self.completeButton.centerY] forKey:@"3"];
+}
+
+- (IBAction)clickCompleteBtn:(id)sender {
+    if (!_nameTextField.text.length) {
+        [[self alertView] showWarning:self title:@"提示" subTitle:@"建议您输入预算名称" closeButtonTitle:@"知道了" duration:0.0f];
+    }
+    if ([_moneryTextField.text integerValue] < 1) {
+        [[self alertView] showWarning:self title:@"提示" subTitle:@"建议您输入输入预算金额" closeButtonTitle:@"知道了" duration:0.0f];
+    }
+    
+    [self.view endEditing:YES];
+    
+    BudgetModel *budget = [[BudgetModel alloc] init];
+    budget.budgetName = _nameTextField.text;
+    budget.budgetMoney = [_moneryTextField.text floatValue];
+    budget.creatTime = [NSDate date];
+    
+    [budget save];
+    
+    [self goBack:nil];
 }
 
 -(POPSpringAnimation *)springAnimation:(CGFloat)topSpace{

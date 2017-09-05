@@ -7,6 +7,7 @@
 //
 
 #import "RootViewController.h"
+#import "AppSettingDefault.h"
 
 @interface RootViewController ()
 
@@ -24,14 +25,10 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(SCLAlertView *)alertView{
+    SCLAlertView *alert = [[SCLAlertView alloc] init];
+    alert.customViewColor = [AppSettingDefault share].themeColor;
+    return alert;
 }
-*/
 
 @end

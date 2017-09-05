@@ -11,6 +11,7 @@
 #import "MainTableViewCell.h"
 #import "AppSettingDefault.h"
 #import "AddBudgetViewController.h"
+#import "BudgetModel.h"
 
 static NSString * const cellID = @"CELLID";
 static CGFloat cellHeight = 80;
@@ -29,6 +30,7 @@ static CGFloat addButtonW = 50;
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     [self animationShowAddButton];
+    [self loadLocalBudgets];
 }
 
 - (void)viewDidLoad {
@@ -87,16 +89,22 @@ static CGFloat addButtonW = 50;
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     MainTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:cellID];
+    BudgetModel *item = self.dataArray[indexPath.row];
+    cell.textLabel.text = item.budgetName;
     return cell;
 }
 
 #pragma mark - PriveMethod
 
+-(void)loadLocalBudgets{
+    NSArray *budgets = [BudgetModel findAll];
+    self.dataArray = budgets.mutableCopy;
+    [self.tableView reloadData];
+}
+
 -(void)clickAddOrder{
     AddBudgetViewController *add = [[AddBudgetViewController alloc] init];
-    [self presentViewController:add animated:YES completion:^{
-        
-    }];
+    [self presentViewController:add animated:YES completion:^{}];
 }
 
 -(void)animationShowAddButton{

@@ -22,14 +22,14 @@ typedef NS_ENUM(NSInteger,OutlayType){
 
 @interface BudgetModel : JKDBModel
 @property(nonatomic,copy)NSString *budgetName;
-@property(nonatomic,copy)NSString *creatTime;
+@property(nonatomic,strong)NSDate *creatTime;
 @property(nonatomic,copy)NSString *modifyTime;
 @property(nonatomic,assign)CGFloat budgetMoney;//总预算
 @property(nonatomic,assign)CGFloat outlayMoney;//支出总金额
 @end
 
 @interface OrderModel : JKDBModel
-@property(nonatomic,copy)NSString *orderName;
+@property(nonatomic,copy)NSString *orderName;//预算名称
 @property (nonatomic, assign)OutlayType orderType;//订单类型
 @property(nonatomic,copy)NSString *creatTime;
 @property(nonatomic,assign)CGFloat orderNumber;//订单支出金额

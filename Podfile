@@ -11,6 +11,8 @@ pod 'YYCategories'
 pod 'Masonry', '~> 1.0.2'
 pod 'FMDB'
 pod 'pop'
+pod 'SVProgressHUD'
+pod 'SCLAlertView-Objective-C'
 
 
   target 'SmartbudgetTests' do

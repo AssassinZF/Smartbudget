@@ -27,8 +27,8 @@
                 <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SCn-fd-3fp">
                     <rect key="frame" x="20" y="282" width="335" height="42"/>
                     <subviews>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="预算金额" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WUh-77-m1P">
-                            <rect key="frame" x="5" y="0.0" width="325" height="42"/>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="预算金额" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="WUh-77-m1P">
+                            <rect key="frame" x="15" y="0.0" width="305" height="42"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -36,9 +36,9 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="WUh-77-m1P" secondAttribute="trailing" constant="5" id="1IV-85-KhL"/>
+                        <constraint firstAttribute="trailing" secondItem="WUh-77-m1P" secondAttribute="trailing" constant="15" id="1IV-85-KhL"/>
                         <constraint firstAttribute="bottom" secondItem="WUh-77-m1P" secondAttribute="bottom" id="Bwr-nv-Kdn"/>
-                        <constraint firstItem="WUh-77-m1P" firstAttribute="leading" secondItem="SCn-fd-3fp" secondAttribute="leading" constant="5" id="Kgv-CB-Ivh"/>
+                        <constraint firstItem="WUh-77-m1P" firstAttribute="leading" secondItem="SCn-fd-3fp" secondAttribute="leading" constant="15" id="Kgv-CB-Ivh"/>
                         <constraint firstAttribute="height" constant="42" id="SGe-Z5-e2D"/>
                         <constraint firstItem="WUh-77-m1P" firstAttribute="top" secondItem="SCn-fd-3fp" secondAttribute="top" id="fJj-W5-Xp3"/>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="42" id="iGR-JO-EKB"/>
@@ -63,8 +63,8 @@
                 <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="29h-wS-aCx">
                     <rect key="frame" x="20" y="230" width="335" height="42"/>
                     <subviews>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="预算名称" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dzD-X0-b4d">
-                            <rect key="frame" x="5" y="0.0" width="325" height="42"/>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="预算名称" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dzD-X0-b4d">
+                            <rect key="frame" x="15" y="0.0" width="305" height="42"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
@@ -72,10 +72,10 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="dzD-X0-b4d" firstAttribute="leading" secondItem="29h-wS-aCx" secondAttribute="leading" constant="5" id="0r6-gO-nQg"/>
+                        <constraint firstItem="dzD-X0-b4d" firstAttribute="leading" secondItem="29h-wS-aCx" secondAttribute="leading" constant="15" id="0r6-gO-nQg"/>
                         <constraint firstAttribute="height" constant="42" id="Aal-0n-IxV"/>
                         <constraint firstItem="dzD-X0-b4d" firstAttribute="top" secondItem="29h-wS-aCx" secondAttribute="top" id="UaP-Yr-o2N"/>
-                        <constraint firstAttribute="trailing" secondItem="dzD-X0-b4d" secondAttribute="trailing" constant="5" id="hqG-AK-9Hx"/>
+                        <constraint firstAttribute="trailing" secondItem="dzD-X0-b4d" secondAttribute="trailing" constant="15" id="hqG-AK-9Hx"/>
                         <constraint firstAttribute="bottom" secondItem="dzD-X0-b4d" secondAttribute="bottom" id="kOa-3h-eYU"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
@@ -107,6 +107,9 @@
                             <real key="value" value="24.5"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="clickCompleteBtn:" destination="-1" eventType="touchUpInside" id="zes-UK-bpu"/>
+                    </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Mx-gV-ktB">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
