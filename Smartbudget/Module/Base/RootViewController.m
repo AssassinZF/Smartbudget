@@ -18,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = RGB(249, 248, 238);
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,5 +31,31 @@
     alert.customViewColor = [AppSettingDefault share].themeColor;
     return alert;
 }
+
+-(void)addRightBarItem:(NSString *)title image:(UIImage *)img{
+    if (!title.length && !img) {
+        return;
+    }
+    UIButton *item = [self button:title image:img];
+    UIBarButtonItem *baritem = [[UIBarButtonItem alloc] initWithCustomView:item];
+    self.navigationItem.rightBarButtonItem = baritem;
+}
+
+-(UIButton *)button:(NSString *)title image:(UIImage *)img{
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.contentEdgeInsets = UIEdgeInsetsMake(0, 5, 0, 5);
+
+    if (title.length) {
+        btn.frame = CGRectMake(0, 0, [title sizeWithAttributes:@{NSFontAttributeName : btn.titleLabel.font}].width + 10, 44);
+    }else{
+        btn.frame = CGRectMake(0, 0, img.size.width + 10, img.size.height);
+    }
+    [btn addTarget:self action:@selector(handleNaviBarRightBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    return btn;
+}
+
+- (void)handleNaviBarRightBtnClick:(id)sender {}
+
 
 @end

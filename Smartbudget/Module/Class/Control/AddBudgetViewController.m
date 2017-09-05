@@ -48,14 +48,17 @@
 }
 
 - (IBAction)clickCompleteBtn:(id)sender {
+    [self.view endEditing:YES];
+
     if (!_nameTextField.text.length) {
         [[self alertView] showWarning:self title:@"提示" subTitle:@"建议您输入预算名称" closeButtonTitle:@"知道了" duration:0.0f];
+        return;
     }
     if ([_moneryTextField.text integerValue] < 1) {
         [[self alertView] showWarning:self title:@"提示" subTitle:@"建议您输入输入预算金额" closeButtonTitle:@"知道了" duration:0.0f];
+        return;
     }
     
-    [self.view endEditing:YES];
     
     BudgetModel *budget = [[BudgetModel alloc] init];
     budget.budgetName = _nameTextField.text;

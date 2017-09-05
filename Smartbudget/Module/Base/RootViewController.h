@@ -10,4 +10,14 @@
 
 @interface RootViewController : UIViewController
 -(SCLAlertView *)alertView;
+
+
+/**
+ add right barItem
+
+ @param title title
+ @param img img
+ */
+-(void)addRightBarItem:(NSString *)title image:(UIImage *)img;
+- (void)handleNaviBarRightBtnClick:(id)sender;
 @end

@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		540E2CF61F57F15A00A8D85F /* JKDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 540E2CF31F57F15A00A8D85F /* JKDBHelper.m */; };
 		540E2CF71F57F15A00A8D85F /* JKDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 540E2CF51F57F15A00A8D85F /* JKDBModel.m */; };
+		544394991F5EB06700791FC3 /* ExpenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 544394971F5EB06600791FC3 /* ExpenseViewController.m */; };
+		5443949A1F5EB06700791FC3 /* ExpenseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 544394981F5EB06600791FC3 /* ExpenseViewController.xib */; };
+		5443949E1F5EBB2D00791FC3 /* OrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5443949C1F5EBB2D00791FC3 /* OrderTableViewCell.m */; };
+		5443949F1F5EBB2D00791FC3 /* OrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5443949D1F5EBB2D00791FC3 /* OrderTableViewCell.xib */; };
 		54E1ACDF1F4D7DFA009A3FCE /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E1ACDC1F4D7DFA009A3FCE /* MainViewController.m */; };
 		54E1ACE31F4D7E26009A3FCE /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E1ACE11F4D7E26009A3FCE /* MainTableViewCell.m */; };
 		54E1ACE41F4D7E26009A3FCE /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54E1ACE21F4D7E26009A3FCE /* MainTableViewCell.xib */; };
@@ -56,6 +60,12 @@
 		540E2CF31F57F15A00A8D85F /* JKDBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKDBHelper.m; sourceTree = "<group>"; };
 		540E2CF41F57F15A00A8D85F /* JKDBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKDBModel.h; sourceTree = "<group>"; };
 		540E2CF51F57F15A00A8D85F /* JKDBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKDBModel.m; sourceTree = "<group>"; };
+		544394961F5EB06600791FC3 /* ExpenseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpenseViewController.h; sourceTree = "<group>"; };
+		544394971F5EB06600791FC3 /* ExpenseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpenseViewController.m; sourceTree = "<group>"; };
+		544394981F5EB06600791FC3 /* ExpenseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpenseViewController.xib; sourceTree = "<group>"; };
+		5443949B1F5EBB2D00791FC3 /* OrderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderTableViewCell.h; sourceTree = "<group>"; };
+		5443949C1F5EBB2D00791FC3 /* OrderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderTableViewCell.m; sourceTree = "<group>"; };
+		5443949D1F5EBB2D00791FC3 /* OrderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderTableViewCell.xib; sourceTree = "<group>"; };
 		54E1ACDB1F4D7DFA009A3FCE /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		54E1ACDC1F4D7DFA009A3FCE /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		54E1ACE01F4D7E26009A3FCE /* MainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewCell.h; sourceTree = "<group>"; };
@@ -189,6 +199,9 @@
 				54E1ACEB1F4EB49A009A3FCE /* AddBudgetViewController.h */,
 				54E1ACEC1F4EB49A009A3FCE /* AddBudgetViewController.m */,
 				54E1ACED1F4EB49A009A3FCE /* AddBudgetViewController.xib */,
+				544394961F5EB06600791FC3 /* ExpenseViewController.h */,
+				544394971F5EB06600791FC3 /* ExpenseViewController.m */,
+				544394981F5EB06600791FC3 /* ExpenseViewController.xib */,
 			);
 			path = Control;
 			sourceTree = "<group>";
@@ -208,6 +221,9 @@
 				54E1ACE01F4D7E26009A3FCE /* MainTableViewCell.h */,
 				54E1ACE11F4D7E26009A3FCE /* MainTableViewCell.m */,
 				54E1ACE21F4D7E26009A3FCE /* MainTableViewCell.xib */,
+				5443949B1F5EBB2D00791FC3 /* OrderTableViewCell.h */,
+				5443949C1F5EBB2D00791FC3 /* OrderTableViewCell.m */,
+				5443949D1F5EBB2D00791FC3 /* OrderTableViewCell.xib */,
 			);
 			name = Cell;
 			path = View;
@@ -486,6 +502,8 @@
 				54E1ACE41F4D7E26009A3FCE /* MainTableViewCell.xib in Resources */,
 				AB066D6C1F4D25D400378D80 /* Main.storyboard in Resources */,
 				54E1ACEF1F4EB49A009A3FCE /* AddBudgetViewController.xib in Resources */,
+				5443949F1F5EBB2D00791FC3 /* OrderTableViewCell.xib in Resources */,
+				5443949A1F5EB06700791FC3 /* ExpenseViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -662,6 +680,8 @@
 				54E1ACE71F4D7F75009A3FCE /* BudgetModel.m in Sources */,
 				AB066DA71F4D2BAF00378D80 /* RootView.m in Sources */,
 				54E1ACEE1F4EB49A009A3FCE /* AddBudgetViewController.m in Sources */,
+				5443949E1F5EBB2D00791FC3 /* OrderTableViewCell.m in Sources */,
+				544394991F5EB06700791FC3 /* ExpenseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

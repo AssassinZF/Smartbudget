@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class BudgetModel;
+
 @interface MainTableViewCell : UITableViewCell
+@property (nonatomic, strong)BudgetModel *budgetModel;
 
 @end

@@ -12,6 +12,7 @@
 #import "AppSettingDefault.h"
 #import "AddBudgetViewController.h"
 #import "BudgetModel.h"
+#import "ExpenseViewController.h"
 
 static NSString * const cellID = @"CELLID";
 static CGFloat cellHeight = 80;
@@ -54,6 +55,8 @@ static CGFloat addButtonW = 50;
     addButton.layer.cornerRadius = 0.5;
     [addButton addTarget:self action:@selector(clickAddOrder) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:addButton];
+    
+    [self addRightBarItem:nil image:[UIImage imageNamed:@"setting"]];
 
 }
 
@@ -70,7 +73,9 @@ static CGFloat addButtonW = 50;
         _tableView.dataSource = self;
         _tableView.rowHeight = cellHeight;
         _tableView.showsVerticalScrollIndicator = NO;
-        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        _tableView.separatorColor = RGB(233, 229, 217);
+        _tableView.backgroundColor = RGB(249, 248, 238);
+        _tableView.tableFooterView = [UIView new];
         [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([MainTableViewCell class]) bundle:nil] forCellReuseIdentifier:cellID];
     }
     return _tableView;
@@ -90,9 +95,34 @@ static CGFloat addButtonW = 50;
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     MainTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:cellID];
     BudgetModel *item = self.dataArray[indexPath.row];
-    cell.textLabel.text = item.budgetName;
+    cell.budgetModel = item;
     return cell;
 }
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    ExpenseViewController *VC = [[ExpenseViewController alloc] init];
+    VC.budgetItem = self.dataArray[indexPath.row];
+    [self.navigationController pushViewController:VC animated:YES];
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        //delete cell
+        BudgetModel *item = self.dataArray[indexPath.row];
+        [item deleteObject];
+        [self.dataArray removeObjectAtIndex:indexPath.row];
+        [self.tableView beginUpdates];
+        [self.tableView deleteRowAtIndexPath:indexPath withRowAnimation:UITableViewRowAnimationLeft];
+        [self.tableView endUpdates];
+
+    }
+}
+
+- (nullable NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return @"删除";
+}
+
+
 
 #pragma mark - PriveMethod
 
@@ -100,6 +130,11 @@ static CGFloat addButtonW = 50;
     NSArray *budgets = [BudgetModel findAll];
     self.dataArray = budgets.mutableCopy;
     [self.tableView reloadData];
+    if (self.tableView.contentSize.height >= self.tableView.height) {
+        CGSize size = self.tableView.contentSize;
+        size.height += cellHeight;
+        self.tableView.contentSize = size;
+    }
 }
 
 -(void)clickAddOrder{

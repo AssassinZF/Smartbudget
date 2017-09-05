@@ -21,6 +21,9 @@
     self.navigationBar.translucent = NO;
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
     self.navigationBar.barStyle = UIStatusBarStyleLightContent;
+    [self.navigationBar setTintColor:[UIColor whiteColor]];
+    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)
+                                                         forBarMetrics:UIBarMetricsDefault];
 
 
 }

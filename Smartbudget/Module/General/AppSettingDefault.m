@@ -23,11 +23,6 @@
     return RGB(39, 177, 137);
 }
 
--(UIColor *)greedColor{
-    return RGB(245, 67, 86);
-//    return RGB(25, 204, 96);
-}
-
 -(void)projectConfigure{
 }
 @end

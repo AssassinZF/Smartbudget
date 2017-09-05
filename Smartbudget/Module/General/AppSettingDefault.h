@@ -11,7 +11,6 @@
 
 @interface AppSettingDefault : NSObject
 @property(nonatomic,strong)UIColor *themeColor;
-@property (nonatomic, strong)UIColor *greedColor;
 +(instancetype)share;
 -(void)projectConfigure;
 @end

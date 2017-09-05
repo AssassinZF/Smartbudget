@@ -12,4 +12,8 @@
 +(instancetype)fontColor{
     return [UIColor colorWithHexString:@"212121"];
 }
+
++(instancetype)moneyColor{
+    return RGB(245, 67, 86);
+}
 @end
