@@ -13,6 +13,8 @@ pod 'FMDB'
 pod 'pop'
 pod 'SVProgressHUD'
 pod 'SCLAlertView-Objective-C'
+pod 'CYLTableViewPlaceHolder'
+
 
 
   target 'SmartbudgetTests' do

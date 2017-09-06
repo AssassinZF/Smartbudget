@@ -63,7 +63,8 @@
     BudgetModel *budget = [[BudgetModel alloc] init];
     budget.budgetName = _nameTextField.text;
     budget.budgetMoney = [_moneryTextField.text floatValue];
-    budget.creatTime = [NSDate date];
+    budget.creatTime = [[NSDate date] stringWithFormat:@"YYYY/MM/dd"];
+    budget.modifyTime = budget.creatTime;
     
     [budget save];
     

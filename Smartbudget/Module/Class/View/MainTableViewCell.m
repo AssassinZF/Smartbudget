@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *creatTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *moneyLabel;
 @property (weak, nonatomic) IBOutlet UILabel *surplusMoneyLabel;
+@property (weak, nonatomic) IBOutlet UILabel *outPlayMoneyLabel;
 
 @end
 
@@ -25,8 +26,13 @@
     self.budgetNameLabel.text = budgetModel.budgetName;
     NSString *money = [NSString stringWithFormat:@"%.2f",budgetModel.budgetMoney - budgetModel.outlayMoney];
     self.surplusMoneyLabel.text = money;
-    self.creatTimeLabel.text = [[NSDate date] stringWithFormat:@"YYYY/MM/dd"];
+    self.creatTimeLabel.text = [NSString stringWithFormat:@"%@ ~ %@",budgetModel.creatTime,budgetModel.modifyTime];
     self.moneyLabel.text = [NSString stringWithFormat:@"%.2f",budgetModel.budgetMoney];
+    if (budgetModel.outlayMoney > 0.00) {
+        self.outPlayMoneyLabel.text = [NSString stringWithFormat:@"-%.2f",budgetModel.outlayMoney];
+    }
+    
+    
 }
 
 - (void)awakeFromNib {
@@ -35,6 +41,7 @@
     self.backgroundColor = [UIColor clearColor];
     self.surplusMoneyLabel.backgroundColor = [UIColor moneyColor];
     self.selectionStyle = UITableViewCellSelectionStyleNone;
+    self.outPlayMoneyLabel.textColor = [UIColor moneyColor];
 }
 
 -(void)layoutSubviews{

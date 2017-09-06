@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExpenseViewController">
             <connections>
+                <outlet property="allMoneyLabel" destination="Fvp-6o-rYi" id="yXq-sl-RFE"/>
                 <outlet property="outPlayMoneyLabel" destination="I8X-hj-nQq" id="C07-uP-SG8"/>
                 <outlet property="surplusLabel" destination="RQ7-Mx-jun" id="Wei-L2-XoX"/>
                 <outlet property="tableView" destination="o8j-Ul-h9v" id="zbu-Px-koD"/>
@@ -69,7 +70,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" red="0.64705882349999999" green="0.64705882349999999" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="RDv-qo-8L7" firstAttribute="top" secondItem="04E-of-6Ob" secondAttribute="bottom" constant="3" id="7fz-dv-s9W"/>
                         <constraint firstItem="I8X-hj-nQq" firstAttribute="bottom" secondItem="RDv-qo-8L7" secondAttribute="bottom" id="ATW-fg-v7b"/>
@@ -89,36 +90,51 @@
                         <constraint firstItem="RDv-qo-8L7" firstAttribute="leading" secondItem="A53-2S-T8a" secondAttribute="leading" constant="30" id="xUV-KD-30b"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KqP-CF-nPN">
-                    <rect key="frame" x="10" y="125" width="355" height="20"/>
+                <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KqP-CF-nPN">
+                    <rect key="frame" x="10" y="115" width="355" height="20"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="ik9-wD-057"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="o8j-Ul-h9v">
-                    <rect key="frame" x="10" y="140" width="355" height="527"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="o8j-Ul-h9v">
+                    <rect key="frame" x="20" y="125" width="335" height="542"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="me7-km-YDZ"/>
                         <outlet property="delegate" destination="-1" id="ENB-dX-QYf"/>
                     </connections>
                 </tableView>
+                <view alpha="0.34999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KyD-PR-GDb">
+                    <rect key="frame" x="20" y="125" width="335" height="10"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" id="ZFp-Mq-mT5"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="o8j-Ul-h9v" firstAttribute="trailing" secondItem="KqP-CF-nPN" secondAttribute="trailing" id="33v-Gr-tKK"/>
+                <constraint firstItem="KyD-PR-GDb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="2sh-lO-88S"/>
+                <constraint firstItem="o8j-Ul-h9v" firstAttribute="trailing" secondItem="KqP-CF-nPN" secondAttribute="trailing" constant="-10" id="33v-Gr-tKK"/>
                 <constraint firstAttribute="trailing" secondItem="A53-2S-T8a" secondAttribute="trailing" id="HWv-xM-aCw"/>
-                <constraint firstItem="KqP-CF-nPN" firstAttribute="top" secondItem="A53-2S-T8a" secondAttribute="bottom" constant="10" id="IMo-44-Dm5"/>
+                <constraint firstItem="KqP-CF-nPN" firstAttribute="top" secondItem="A53-2S-T8a" secondAttribute="bottom" id="IMo-44-Dm5"/>
                 <constraint firstAttribute="bottom" secondItem="o8j-Ul-h9v" secondAttribute="bottom" id="ISe-JL-JUC"/>
-                <constraint firstItem="o8j-Ul-h9v" firstAttribute="top" secondItem="KqP-CF-nPN" secondAttribute="bottom" constant="-5" id="Iun-ih-iKl"/>
+                <constraint firstItem="o8j-Ul-h9v" firstAttribute="top" secondItem="KqP-CF-nPN" secondAttribute="bottom" constant="-10" id="Iun-ih-iKl"/>
                 <constraint firstItem="KqP-CF-nPN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="PDL-iv-g5H"/>
                 <constraint firstAttribute="trailing" secondItem="KqP-CF-nPN" secondAttribute="trailing" constant="10" id="Tlr-xp-nQl"/>
-                <constraint firstItem="o8j-Ul-h9v" firstAttribute="leading" secondItem="KqP-CF-nPN" secondAttribute="leading" id="eXR-W1-8st"/>
+                <constraint firstItem="o8j-Ul-h9v" firstAttribute="leading" secondItem="KqP-CF-nPN" secondAttribute="leading" constant="10" id="eXR-W1-8st"/>
+                <constraint firstAttribute="trailing" secondItem="KyD-PR-GDb" secondAttribute="trailing" constant="20" id="iIO-Se-GzX"/>
                 <constraint firstItem="A53-2S-T8a" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="lvM-kb-uFH"/>
                 <constraint firstItem="A53-2S-T8a" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="rLC-gf-89R"/>
+                <constraint firstItem="KyD-PR-GDb" firstAttribute="top" secondItem="KqP-CF-nPN" secondAttribute="bottom" constant="-10" id="smQ-l9-A6f"/>
             </constraints>
-            <point key="canvasLocation" x="24.5" y="52.5"/>
+            <point key="canvasLocation" x="-290" y="39"/>
         </view>
     </objects>
 </document>

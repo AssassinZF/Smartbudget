@@ -1,4 +1,5 @@
 PODS:
+  - CYLTableViewPlaceHolder (1.0.8)
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
@@ -11,6 +12,7 @@ PODS:
   - YYCategories/no-arc (1.0.4)
 
 DEPENDENCIES:
+  - CYLTableViewPlaceHolder
   - FMDB
   - Masonry (~> 1.0.2)
   - pop
@@ -19,6 +21,7 @@ DEPENDENCIES:
   - YYCategories
 
 SPEC CHECKSUMS:
+  CYLTableViewPlaceHolder: 44075c119aab78bbc514c75d771d6565e19938e8
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
@@ -26,6 +29,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
 
-PODFILE CHECKSUM: fd8f1ada01cd35892c8910fbab42233c553ea213
+PODFILE CHECKSUM: 4daa41b2acbb4f9bdc05191bbc1770f644bf9751
 
 COCOAPODS: 1.2.1

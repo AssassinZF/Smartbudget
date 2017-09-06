@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>CYLTableViewPlaceHolder.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>FMDB.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -57,27 +62,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>62E8A207216BE3248199EEB97A4674D3</key>
+		<key>3CAF99E525444760E4006B7C19E0D5E3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>51B5398991CD532D65EFD3825BCD1DD3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>6EAAAE9B5047FA1C299BF62A4A172940</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>7482D762DF252CBABC2B9D5F87AF9B01</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>75C084D8358AF5E4EE8501AA33AE7EA0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>76D37C4C28219800AF01F8DBB63E7D34</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,7 +87,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DA97F4A753F285E5413ABB0E6EB5D1A7</key>
+		<key>BEA0C8C764398144775751AC89C90146</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DDA98C229D350485CC29793AB597F279</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F8DDC989CCB3EA1C86055EFB468FC244</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FB4D86EFAEDF33BF467D87B6575E9BC0</key>
 		<dict>
 			<key>primary</key>
 			<true/>

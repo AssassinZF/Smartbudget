@@ -22,7 +22,7 @@ typedef NS_ENUM(NSInteger,OutlayType){
 
 @interface BudgetModel : JKDBModel
 @property(nonatomic,copy)NSString *budgetName;
-@property(nonatomic,strong)NSDate *creatTime;
+@property(nonatomic,copy)NSString *creatTime;
 @property(nonatomic,copy)NSString *modifyTime;
 @property(nonatomic,assign)CGFloat budgetMoney;//总预算
 @property(nonatomic,assign)CGFloat outlayMoney;//支出总金额

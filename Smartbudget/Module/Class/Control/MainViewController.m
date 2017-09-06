@@ -21,6 +21,7 @@ static CGFloat addButtonW = 50;
 @interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     UIButton *addButton;//加号
+    UIView *roundView;//加号放大背景view
 }
 @property (nonatomic, strong)NSMutableArray *dataArray;
 @property (nonatomic, strong)UITableView *tableView;
@@ -30,8 +31,18 @@ static CGFloat addButtonW = 50;
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    [self animationShowAddButton];
     [self loadLocalBudgets];
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self animationShowAddButton:YES];
+
+}
+
+-(void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    [self animationShowAddButton:NO];
 }
 
 - (void)viewDidLoad {
@@ -47,12 +58,22 @@ static CGFloat addButtonW = 50;
         make.edges.equalTo(self.view).with.insets(UIEdgeInsetsMake(0, 0, 0, 0));
     }];
     
+    
+    roundView = [UIView new];
+    roundView.backgroundColor = [AppSettingDefault share].themeColor;
+    roundView.layer.cornerRadius = 0.5;
+    roundView.centerX = self.view.centerX;
+    roundView.centerY = self.view.height - addButtonW/2 - 40 - NavBar_H;
+    roundView.size = CGSizeMake(1, 1);
+    [self.view addSubview:roundView];
+
+    
     addButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    addButton.backgroundColor = [AppSettingDefault share].themeColor;
-    addButton.size = CGSizeMake(1, 1);
+    addButton.size = CGSizeMake(addButtonW, addButtonW);
     addButton.centerX = self.view.centerX;
     addButton.centerY = self.view.height - addButtonW/2 - 40 - NavBar_H;
-    addButton.layer.cornerRadius = 0.5;
+    addButton.layer.cornerRadius = addButtonW/2;
+    [addButton setImage:[UIImage imageNamed:@"addicon"] forState:UIControlStateNormal];
     [addButton addTarget:self action:@selector(clickAddOrder) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:addButton];
     
@@ -142,14 +163,14 @@ static CGFloat addButtonW = 50;
     [self presentViewController:add animated:YES completion:^{}];
 }
 
--(void)animationShowAddButton{
+-(void)animationShowAddButton:(BOOL)isBig{
+    [roundView.layer pop_removeAnimationForKey:@"round"];
     POPSpringAnimation *spring = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerScaleXY];
     spring.beginTime = CACurrentMediaTime() + 0.5;
-    spring.springSpeed = 5;
+    spring.springSpeed = 8;
     spring.springBounciness = 10;
-    spring.toValue = [NSValue valueWithCGPoint:CGPointMake(addButtonW, addButtonW)];
-    [addButton.layer pop_addAnimation:spring forKey:nil];
-    [addButton setImage:[UIImage imageNamed:@"addicon"] forState:UIControlStateNormal];
+    spring.toValue = [NSValue valueWithCGPoint:CGPointMake(isBig?addButtonW:1, isBig?addButtonW:1)];
+    [roundView.layer pop_addAnimation:spring forKey:@"round"];
 
 }
 

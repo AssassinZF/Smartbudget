@@ -46,14 +46,22 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Cb-b2-jX0">
+                        <rect key="frame" x="63" y="71.5" width="0.0" height="0.0"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="9Cb-b2-jX0" firstAttribute="bottom" secondItem="Bsh-V9-gnP" secondAttribute="bottom" id="1LZ-cN-DKg"/>
                     <constraint firstAttribute="trailing" secondItem="57G-Sz-d9p" secondAttribute="trailing" constant="20" id="BRC-GF-CQ2"/>
                     <constraint firstItem="cD9-to-4OT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="GT2-X0-VYu"/>
                     <constraint firstItem="r4A-d3-wyw" firstAttribute="top" secondItem="cD9-to-4OT" secondAttribute="bottom" constant="8" id="GYi-Oa-TCA"/>
                     <constraint firstItem="cD9-to-4OT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="MzY-Dm-7Re"/>
                     <constraint firstItem="r4A-d3-wyw" firstAttribute="leading" secondItem="cD9-to-4OT" secondAttribute="leading" id="NtB-ma-HZb"/>
                     <constraint firstItem="Bsh-V9-gnP" firstAttribute="leading" secondItem="r4A-d3-wyw" secondAttribute="leading" id="olC-04-h2I"/>
+                    <constraint firstItem="9Cb-b2-jX0" firstAttribute="leading" secondItem="Bsh-V9-gnP" secondAttribute="trailing" constant="12" id="qCZ-aL-F14"/>
                     <constraint firstItem="Bsh-V9-gnP" firstAttribute="top" secondItem="r4A-d3-wyw" secondAttribute="bottom" constant="3.5" id="uTL-V1-62a"/>
                     <constraint firstItem="57G-Sz-d9p" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="zrI-io-33R"/>
                 </constraints>
@@ -62,6 +70,7 @@
                 <outlet property="budgetNameLabel" destination="cD9-to-4OT" id="xMA-Q5-nFd"/>
                 <outlet property="creatTimeLabel" destination="r4A-d3-wyw" id="qsj-zc-oGQ"/>
                 <outlet property="moneyLabel" destination="Bsh-V9-gnP" id="tEt-7A-Hz5"/>
+                <outlet property="outPlayMoneyLabel" destination="9Cb-b2-jX0" id="LdM-2m-acQ"/>
                 <outlet property="surplusMoneyLabel" destination="57G-Sz-d9p" id="Ipq-yP-Zmh"/>
             </connections>
         </tableViewCell>
