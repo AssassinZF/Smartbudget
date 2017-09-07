@@ -8,6 +8,7 @@
 
 #import "PullDwonView.h"
 #import "AppSettingDefault.h"
+#import "UIColor+AppConfigure.h"
 
 static CGFloat Icon_W = 40;
 static CGFloat bottomSpace = 30;
@@ -52,7 +53,7 @@ static CGFloat bottomSpace = 30;
     CGFloat crisis = bottomSpace+Icon_W;//出现绿色圆的临界值
     if (scrollOffy > crisis+bottomSpace) {
         pullFinish = YES;
-        self.backgroundColor = [AppSettingDefault share].themeColor;
+        self.backgroundColor = [UIColor moneyColor];
         lightImageView.layer.position = dashImageView.layer.position;
 
     }else{

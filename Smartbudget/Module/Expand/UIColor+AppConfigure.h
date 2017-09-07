@@ -11,4 +11,5 @@
 @interface UIColor (AppConfigure)
 +(instancetype)fontColor;
 +(instancetype)moneyColor;
+
 @end

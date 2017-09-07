@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SpendView : UIView
+typedef void(^AddOrderBlock)(id orderItem);
 
+@interface SpendView : UIView
+@property (nonatomic, copy)AddOrderBlock orderAddBlock;
++(instancetype)showWithSuperView:(UIView *)superView;
 @end

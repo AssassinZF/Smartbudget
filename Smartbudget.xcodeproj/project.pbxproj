@@ -15,6 +15,9 @@
 		5443949F1F5EBB2D00791FC3 /* OrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5443949D1F5EBB2D00791FC3 /* OrderTableViewCell.xib */; };
 		544394A21F5FD06C00791FC3 /* PullDwonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 544394A11F5FD06C00791FC3 /* PullDwonView.m */; };
 		544394A51F5FEAD700791FC3 /* SpendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 544394A41F5FEAD700791FC3 /* SpendView.m */; };
+		544394A71F60EAE800791FC3 /* SpendView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 544394A61F60EAE800791FC3 /* SpendView.xib */; };
+		544394AB1F6139EF00791FC3 /* LabelCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 544394A91F6139EF00791FC3 /* LabelCollectionViewCell.m */; };
+		544394AC1F6139EF00791FC3 /* LabelCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 544394AA1F6139EF00791FC3 /* LabelCollectionViewCell.xib */; };
 		54E1ACDF1F4D7DFA009A3FCE /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E1ACDC1F4D7DFA009A3FCE /* MainViewController.m */; };
 		54E1ACE31F4D7E26009A3FCE /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E1ACE11F4D7E26009A3FCE /* MainTableViewCell.m */; };
 		54E1ACE41F4D7E26009A3FCE /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54E1ACE21F4D7E26009A3FCE /* MainTableViewCell.xib */; };
@@ -72,6 +75,10 @@
 		544394A11F5FD06C00791FC3 /* PullDwonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullDwonView.m; sourceTree = "<group>"; };
 		544394A31F5FEAD700791FC3 /* SpendView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpendView.h; sourceTree = "<group>"; };
 		544394A41F5FEAD700791FC3 /* SpendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpendView.m; sourceTree = "<group>"; };
+		544394A61F60EAE800791FC3 /* SpendView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpendView.xib; sourceTree = "<group>"; };
+		544394A81F6139EF00791FC3 /* LabelCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelCollectionViewCell.h; sourceTree = "<group>"; };
+		544394A91F6139EF00791FC3 /* LabelCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelCollectionViewCell.m; sourceTree = "<group>"; };
+		544394AA1F6139EF00791FC3 /* LabelCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LabelCollectionViewCell.xib; sourceTree = "<group>"; };
 		54E1ACDB1F4D7DFA009A3FCE /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		54E1ACDC1F4D7DFA009A3FCE /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		54E1ACE01F4D7E26009A3FCE /* MainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewCell.h; sourceTree = "<group>"; };
@@ -197,6 +204,7 @@
 				544394A11F5FD06C00791FC3 /* PullDwonView.m */,
 				544394A31F5FEAD700791FC3 /* SpendView.h */,
 				544394A41F5FEAD700791FC3 /* SpendView.m */,
+				544394A61F60EAE800791FC3 /* SpendView.xib */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -234,6 +242,9 @@
 				5443949B1F5EBB2D00791FC3 /* OrderTableViewCell.h */,
 				5443949C1F5EBB2D00791FC3 /* OrderTableViewCell.m */,
 				5443949D1F5EBB2D00791FC3 /* OrderTableViewCell.xib */,
+				544394A81F6139EF00791FC3 /* LabelCollectionViewCell.h */,
+				544394A91F6139EF00791FC3 /* LabelCollectionViewCell.m */,
+				544394AA1F6139EF00791FC3 /* LabelCollectionViewCell.xib */,
 			);
 			name = Cell;
 			path = View;
@@ -511,9 +522,11 @@
 				AB066D711F4D25D400378D80 /* LaunchScreen.storyboard in Resources */,
 				AB066D6E1F4D25D400378D80 /* Assets.xcassets in Resources */,
 				54E1ACE41F4D7E26009A3FCE /* MainTableViewCell.xib in Resources */,
+				544394A71F60EAE800791FC3 /* SpendView.xib in Resources */,
 				AB066D6C1F4D25D400378D80 /* Main.storyboard in Resources */,
 				54E1ACEF1F4EB49A009A3FCE /* AddBudgetViewController.xib in Resources */,
 				5443949F1F5EBB2D00791FC3 /* OrderTableViewCell.xib in Resources */,
+				544394AC1F6139EF00791FC3 /* LabelCollectionViewCell.xib in Resources */,
 				5443949A1F5EB06700791FC3 /* ExpenseViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -690,6 +703,7 @@
 				AB066DA11F4D2B7900378D80 /* RootViewController.m in Sources */,
 				544394A51F5FEAD700791FC3 /* SpendView.m in Sources */,
 				AB066DA41F4D2B9B00378D80 /* RootNavgationController.m in Sources */,
+				544394AB1F6139EF00791FC3 /* LabelCollectionViewCell.m in Sources */,
 				54E1ACE71F4D7F75009A3FCE /* BudgetModel.m in Sources */,
 				AB066DA71F4D2BAF00378D80 /* RootView.m in Sources */,
 				54E1ACEE1F4EB49A009A3FCE /* AddBudgetViewController.m in Sources */,

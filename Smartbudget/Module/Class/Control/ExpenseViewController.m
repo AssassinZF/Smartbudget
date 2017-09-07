@@ -11,14 +11,16 @@
 #import "AppSettingDefault.h"
 #import "OrderTableViewCell.h"
 #import "PullDwonView.h"
+#import "SpendView.h"
 
 static NSString * const cellID = @"CELLID";
-static CGFloat cellHeight = 50;
+static CGFloat cellHeight = 60;
 
 
 @interface ExpenseViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     PullDwonView *headerView;
+    SpendView *spendView;
 }
 @property (weak, nonatomic) IBOutlet UILabel *allMoneyLabel;
 @property (weak, nonatomic) IBOutlet UILabel *outPlayMoneyLabel;
@@ -40,15 +42,10 @@ static CGFloat cellHeight = 50;
     self.tableView.rowHeight = cellHeight;
     [self loadAllOrder];
     
-    UIView *pullView = [[UIView alloc] init];
-    pullView.backgroundColor = [UIColor purpleColor];
-    pullView.bounds = CGRectMake(0, 0, 100, 100);
-    pullView.center = CGPointMake(self.tableView.centerX, 100);
-    [self.tableView addSubview:pullView];
-    
     self.allMoneyLabel.text = [NSString stringWithFormat:@"%.2f",self.budgetItem.budgetMoney];
     self.outPlayMoneyLabel.text = [NSString stringWithFormat:@"-%.2f",self.budgetItem.outlayMoney];
     self.surplusLabel.text = [NSString stringWithFormat:@"%.2f",self.budgetItem.budgetMoney-self.budgetItem.outlayMoney];
+    
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -82,6 +79,8 @@ static CGFloat cellHeight = 50;
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     OrderTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:cellID];
+    OrderModel *model = self.dataArray[indexPath.row];
+    cell.orderModel = model;
     return cell;
 }
 
@@ -104,18 +103,21 @@ static CGFloat cellHeight = 50;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 0.001;
+    return 10;
 }
 
 -(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
     UIView *view = [UIView new];
-    view.backgroundColor = [UIColor yellowColor];
+    view.backgroundColor = [UIColor whiteColor];
     view.frame = CGRectMake(0, 0, self.tableView.width, 20);
     return view;
 }
 
 - (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    return nil;
+    UIView *view = [UIView new];
+    view.backgroundColor = [UIColor whiteColor];
+    view.frame = CGRectMake(0, 0, self.tableView.width, 10);
+    return view;
 }
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
@@ -125,11 +127,22 @@ static CGFloat cellHeight = 50;
 }
 
 - (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset{
-    NSLog(@"将要结束拖拽");
+    if (scrollView.contentOffset.y < -100) {
+        spendView = [SpendView showWithSuperView:self.view];
+        __weak typeof(self)weakSelf = self;
+        spendView.orderAddBlock = ^(id orderItem) {
+            if (orderItem) {
+                OrderModel *item = (OrderModel *)orderItem;
+                item.orderName = weakSelf.budgetItem.budgetName;
+            }
+        };
+
+    }
+    
 }
 
 -(void)loadAllOrder{
-    NSArray *orders = [OrderModel findWithFormat:[NSString stringWithFormat:@"WHERE orderName=%@",self.budgetItem.budgetName]];
+    NSArray *orders = [OrderModel findByCriteria:[NSString stringWithFormat:@"WHERE orderName=\"%@\"",self.budgetItem.budgetName]];
     self.dataArray = orders.mutableCopy;
     [self.tableView reloadData];
 }

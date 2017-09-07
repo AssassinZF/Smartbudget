@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "JKDBModel.h"
 
+@class OrderModel;
+
 typedef NS_ENUM(NSInteger,OutlayType){
     OutlayTypeGeneral = 0,//一般
     OutlayTypeDine,//用餐
