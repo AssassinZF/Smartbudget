@@ -13,13 +13,22 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     UIView *background = [UIView new];
-    background.backgroundColor = [UIColor purpleColor];
+    background.backgroundColor = [UIColor colorWithHexString:@"F2F0E3"];
     self.selectedBackgroundView = background;
 }
 
--(void)updateCellDictory:(NSDictionary *)dic{
-    self.iconImageView.image = [UIImage imageNamed:dic[@"icon"]];
-    self.labelName.text = dic[@"name"];
-    
+-(void)setDicData:(NSDictionary *)dicData{
+    _dicData = dicData;
+    UIImage *image = self.isSelected?[UIImage imageNamed:dicData[@"iconHighlight"]]:[UIImage imageNamed:dicData[@"icon"]];
+    self.iconImageView.image = image;
+    self.labelName.text = dicData[@"name"];
+
 }
+
+
+-(void)changeSlected:(BOOL)isSelect{
+    UIImage *image = isSelect?[UIImage imageNamed:_dicData[@"iconHighlight"]]:[UIImage imageNamed:_dicData[@"icon"]];
+    self.iconImageView.image = image;
+}
+
 @end

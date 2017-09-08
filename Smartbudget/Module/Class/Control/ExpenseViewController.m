@@ -135,6 +135,7 @@ static CGFloat cellHeight = 60;
             if (orderItem) {
                 OrderModel *item = (OrderModel *)orderItem;
                 item.orderName = weakSelf.budgetItem.budgetName;
+                [item save];
             }
         };
 

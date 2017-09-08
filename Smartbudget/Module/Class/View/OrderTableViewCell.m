@@ -8,6 +8,7 @@
 
 #import "OrderTableViewCell.h"
 #import "BudgetModel.h"
+#import "UIColor+AppConfigure.h"
 
 @interface OrderTableViewCell()
 @property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
@@ -35,7 +36,8 @@
     _orderModel = orderModel;
     self.orderTypeName.text = @"一般";
     self.creatTimeLabel.text = orderModel.creatTime;
-    self.moneyLabel.text = [NSString stringWithFormat:@"%.1f",orderModel.orderNumber];
+    self.moneyLabel.text = [NSString stringWithFormat:@"-%.1f",orderModel.orderNumber];
+    self.moneyLabel.textColor = [UIColor moneyColor];
 }
 
 @end

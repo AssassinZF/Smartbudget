@@ -24,23 +24,13 @@
 	</dict>
     <dict>
         <key>name</key>
-        <string>电影</string>
+        <string>饮料</string>
         <key>color</key>
         <string>FAB450</string>
         <key>iconHighlight</key>
-        <string>label_movie_h</string>
+        <string>label_drink_h</string>
         <key>icon</key>
-        <string>label_movie</string>
-    </dict>
-    <dict>
-        <key>name</key>
-        <string>娱乐</string>
-        <key>color</key>
-        <string>FAB450</string>
-        <key>iconHighlight</key>
-        <string>label_yule_h</string>
-        <key>icon</key>
-        <string>label_yule</string>
+        <string>label_drink</string>
     </dict>
     <dict>
         <key>name</key>
@@ -54,13 +44,13 @@
     </dict>
     <dict>
         <key>name</key>
-        <string>饮料</string>
+        <string>住宿</string>
         <key>color</key>
         <string>FAB450</string>
         <key>iconHighlight</key>
-        <string>label_drink_h</string>
+        <string>label_hotal_h</string>
         <key>icon</key>
-        <string>label_drink</string>
+        <string>label_hotal</string>
     </dict>
     <dict>
         <key>name</key>
@@ -74,16 +64,6 @@
     </dict>
     <dict>
         <key>name</key>
-        <string>礼物</string>
-        <key>color</key>
-        <string>FAB450</string>
-        <key>iconHighlight</key>
-        <string>label_gift_h</string>
-        <key>icon</key>
-        <string>label_gift</string>
-    </dict>
-    <dict>
-        <key>name</key>
         <string>票证</string>
         <key>color</key>
         <string>FAB450</string>
@@ -94,14 +74,63 @@
     </dict>
     <dict>
         <key>name</key>
-        <string>住宿</string>
+        <string>礼物</string>
         <key>color</key>
         <string>FAB450</string>
         <key>iconHighlight</key>
-        <string>label_hotal_h</string>
+        <string>label_gift_h</string>
         <key>icon</key>
-        <string>label_hotal</string>
+        <string>label_gift</string>
     </dict>
-
+    <dict>
+        <key>name</key>
+        <string>酒水</string>
+        <key>color</key>
+        <string>FAB450</string>
+        <key>iconHighlight</key>
+        <string>label_gift_h</string>
+        <key>icon</key>
+        <string>label_gift</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>娱乐</string>
+        <key>color</key>
+        <string>FAB450</string>
+        <key>iconHighlight</key>
+        <string>label_yule_h</string>
+        <key>icon</key>
+        <string>label_yule</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>电影</string>
+        <key>color</key>
+        <string>FAB450</string>
+        <key>iconHighlight</key>
+        <string>label_movie_h</string>
+        <key>icon</key>
+        <string>label_movie</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>医疗</string>
+        <key>color</key>
+        <string>FAB450</string>
+        <key>iconHighlight</key>
+        <string>label_movie_h</string>
+        <key>icon</key>
+        <string>label_movie</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>图书</string>
+        <key>color</key>
+        <string>FAB450</string>
+        <key>iconHighlight</key>
+        <string>label_movie_h</string>
+        <key>icon</key>
+        <string>label_movie</string>
+    </dict>
 </array>
 </plist>

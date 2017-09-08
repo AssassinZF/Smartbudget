@@ -16,10 +16,16 @@ typedef NS_ENUM(NSInteger,OutlayType){
     OutlayTypeDine,//用餐
     OutlayTypeDrink,//饮料
     OutlayTypeTraffic,//交通
-    OutlayTypeMoive,//电影
-    OutlayTypeShopping,//购物
     OutlayTypeMoiveStay,//住宿
+    OutlayTypeShopping,//购物
+    OutlayTypeTicket,//票证
     OutlayTypeGift,//礼物
+    OutlayTypeWine,//酒水
+    OutlayTypePlay,//娱乐
+    OutlayTypeMoive,//电影
+    OutlayTypeHospital,//医疗
+    OutlayTypeBook,//图书
+
 };
 
 @interface BudgetModel : JKDBModel

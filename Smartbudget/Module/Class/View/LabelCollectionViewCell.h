@@ -11,5 +11,6 @@
 @interface LabelCollectionViewCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
 @property (weak, nonatomic) IBOutlet UILabel *labelName;
--(void)updateCellDictory:(NSDictionary *)dic;
+@property (nonatomic, strong)NSDictionary *dicData;
+-(void)changeSlected:(BOOL)isSelect;
 @end

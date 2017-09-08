@@ -13,7 +13,9 @@
 #import "BudgetModel.h"
 
 @interface SpendView()<UICollectionViewDelegate,UICollectionViewDataSource>
-
+{
+    NSInteger selectItem;
+}
 @property (weak, nonatomic) IBOutlet UITextField *outPlayMoneyTextField;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
@@ -45,12 +47,19 @@
     [self.completeBtn setTintColor:[AppSettingDefault share].themeColor];
     
     self.outPlayMoneyTextField.textColor = [UIColor moneyColor];
+    self.outPlayMoneyTextField.tintColor = [UIColor moneyColor];
     
     [self.outPlayMoneyTextField setValue:[UIColor moneyColor] forKeyPath:@"_placeholderLabel.textColor"];
-    
+    self.labelTextField.textColor = [UIColor fontColor];
+    [self.labelTextField setValue:[UIColor fontColor] forKeyPath:@"_placeholderLabel.textColor"];
+    self.labelTextField.tintColor = [UIColor fontColor];
+
     
     self.pageControl.tintColor = [AppSettingDefault share].themeColor;
     
+    self.pageControl.numberOfPages = self.dataArray.count/10;
+    
+    self.collectionView.pagingEnabled = YES;
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([LabelCollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:@"cell"];
@@ -83,8 +92,8 @@
     
     OrderModel *order = [[OrderModel alloc] init];
     order.orderNumber = [self.outPlayMoneyTextField.text floatValue];
-    order.orderType = 0;
-    order.creatTime = [[NSDate date] stringWithFormat:@"YYYY/MM/dd"];
+    order.orderType = 1;
+    order.creatTime = [[NSDate date] stringWithFormat:@"YYYY/MM/dd hh:mm"];
     
     if (self.orderAddBlock) {
         self.orderAddBlock(order);
@@ -117,13 +126,21 @@
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    
+    LabelCollectionViewCell *oldcell = (LabelCollectionViewCell *)[collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:selectItem inSection:0]];
+    [oldcell changeSlected:NO];
+    LabelCollectionViewCell *cell = (LabelCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    [cell changeSlected:YES];
+    selectItem = indexPath.item;
+    self.labelTextField.text = cell.dicData[@"name"];
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     LabelCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     NSDictionary *item = self.dataArray[indexPath.row];
-    [cell updateCellDictory:item];
+    cell.dicData = item;
+    if (indexPath.item == selectItem) {
+        [cell changeSlected:YES];
+    }
     return cell;
 }
 
