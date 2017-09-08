@@ -156,6 +156,7 @@ static CGFloat cellHeight = 60;
     self.budgetItem.modifyTime = order.creatTime;
     self.budgetItem.outlayMoney += order.orderNumber;
     self.surplusLabel.text = [NSString stringWithFormat:@"%.00f",self.budgetItem.budgetMoney - self.budgetItem.outlayMoney];
+    [self.budgetItem update];
 }
 
 -(void)loadAllOrder{

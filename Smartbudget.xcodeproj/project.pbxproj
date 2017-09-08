@@ -21,6 +21,7 @@
 		544F8A5C1F623A440078B3D4 /* OrderTypeLabel.plist in Resources */ = {isa = PBXBuildFile; fileRef = 544F8A5B1F623A440078B3D4 /* OrderTypeLabel.plist */; };
 		544F8A5F1F629D4B0078B3D4 /* NSArray+PathResouce.m in Sources */ = {isa = PBXBuildFile; fileRef = 544F8A5E1F629D4B0078B3D4 /* NSArray+PathResouce.m */; };
 		544F8A621F62A8E70078B3D4 /* SawtoothView.m in Sources */ = {isa = PBXBuildFile; fileRef = 544F8A611F62A8E70078B3D4 /* SawtoothView.m */; };
+		544F8A651F62B4990078B3D4 /* ChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 544F8A641F62B4990078B3D4 /* ChartView.m */; };
 		54E1ACDF1F4D7DFA009A3FCE /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E1ACDC1F4D7DFA009A3FCE /* MainViewController.m */; };
 		54E1ACE31F4D7E26009A3FCE /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E1ACE11F4D7E26009A3FCE /* MainTableViewCell.m */; };
 		54E1ACE41F4D7E26009A3FCE /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54E1ACE21F4D7E26009A3FCE /* MainTableViewCell.xib */; };
@@ -87,6 +88,8 @@
 		544F8A5E1F629D4B0078B3D4 /* NSArray+PathResouce.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+PathResouce.m"; sourceTree = "<group>"; };
 		544F8A601F62A8E70078B3D4 /* SawtoothView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SawtoothView.h; sourceTree = "<group>"; };
 		544F8A611F62A8E70078B3D4 /* SawtoothView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SawtoothView.m; sourceTree = "<group>"; };
+		544F8A631F62B4990078B3D4 /* ChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartView.h; sourceTree = "<group>"; };
+		544F8A641F62B4990078B3D4 /* ChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartView.m; sourceTree = "<group>"; };
 		54E1ACDB1F4D7DFA009A3FCE /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		54E1ACDC1F4D7DFA009A3FCE /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		54E1ACE01F4D7E26009A3FCE /* MainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewCell.h; sourceTree = "<group>"; };
@@ -215,6 +218,8 @@
 				544394A61F60EAE800791FC3 /* SpendView.xib */,
 				544F8A601F62A8E70078B3D4 /* SawtoothView.h */,
 				544F8A611F62A8E70078B3D4 /* SawtoothView.m */,
+				544F8A631F62B4990078B3D4 /* ChartView.h */,
+				544F8A641F62B4990078B3D4 /* ChartView.m */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -725,6 +730,7 @@
 				54E1ACEE1F4EB49A009A3FCE /* AddBudgetViewController.m in Sources */,
 				5443949E1F5EBB2D00791FC3 /* OrderTableViewCell.m in Sources */,
 				544394991F5EB06700791FC3 /* ExpenseViewController.m in Sources */,
+				544F8A651F62B4990078B3D4 /* ChartView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
