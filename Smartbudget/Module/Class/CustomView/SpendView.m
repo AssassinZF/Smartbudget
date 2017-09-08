@@ -92,7 +92,7 @@
     
     OrderModel *order = [[OrderModel alloc] init];
     order.orderNumber = [self.outPlayMoneyTextField.text floatValue];
-    order.orderType = 1;
+    order.orderType = selectItem;
     order.creatTime = [[NSDate date] stringWithFormat:@"YYYY/MM/dd hh:mm"];
     
     if (self.orderAddBlock) {

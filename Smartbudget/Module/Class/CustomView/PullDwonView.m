@@ -27,18 +27,19 @@ static CGFloat bottomSpace = 30;
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = [AppSettingDefault share].backgroundColor;
+        
+        dashImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Oval"]];
+        dashImageView.bounds = CGRectMake(0, 0, Icon_W, Icon_W);
+        dashImageView.center = CGPointMake(self.width/2, self.height - bottomSpace - Icon_W/2);
+        [self addSubview:dashImageView];
         
         lightImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"pullRound"]];
         lightImageView.bounds = CGRectMake(0, 0, Icon_W, Icon_W);
         lightImageView.center = CGPointMake(self.width/2, self.height- 3*bottomSpace - Icon_W-Icon_W/2);
         [self addSubview:lightImageView];
         [self bringSubviewToFront:lightImageView];
-        
-        dashImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Oval"]];
-        dashImageView.bounds = CGRectMake(0, 0, Icon_W, Icon_W);
-        dashImageView.center = CGPointMake(self.width/2, self.height - bottomSpace - Icon_W/2);
-        [self addSubview:dashImageView];
+
         
         pointy = lightImageView.center.y;
     }
@@ -57,7 +58,7 @@ static CGFloat bottomSpace = 30;
         lightImageView.layer.position = dashImageView.layer.position;
 
     }else{
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = [AppSettingDefault share].backgroundColor;
         lightImageView.layer.position = CGPointMake(dashImageView.centerX, pointy+scrollOffy);
 
     }

@@ -9,6 +9,8 @@
 #import "OrderTableViewCell.h"
 #import "BudgetModel.h"
 #import "UIColor+AppConfigure.h"
+#import "NSArray+PathResouce.h"
+#import "AppSettingDefault.h"
 
 @interface OrderTableViewCell()
 @property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
@@ -24,6 +26,7 @@
     [super awakeFromNib];
     // Initialization code
     self.selectionStyle = UITableViewCellSelectionStyleNone;
+    self.backgroundColor = [AppSettingDefault share].backgroundColor;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -34,7 +37,9 @@
 
 -(void)setOrderModel:(OrderModel *)orderModel{
     _orderModel = orderModel;
-    self.orderTypeName.text = @"一般";
+    NSDictionary *labelDic = [[NSArray labelTypeData] objectAtIndex:orderModel.orderType];
+    self.orderTypeName.text = labelDic[@"name"];
+    self.iconImageView.image = [UIImage imageNamed:labelDic[@"iconHighlight"]];
     self.creatTimeLabel.text = orderModel.creatTime;
     self.moneyLabel.text = [NSString stringWithFormat:@"-%.1f",orderModel.orderNumber];
     self.moneyLabel.textColor = [UIColor moneyColor];

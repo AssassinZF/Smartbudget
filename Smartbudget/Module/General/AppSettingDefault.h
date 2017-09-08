@@ -13,4 +13,5 @@
 @property(nonatomic,strong)UIColor *themeColor;
 +(instancetype)share;
 -(void)projectConfigure;
+-(UIColor *)backgroundColor;
 @end

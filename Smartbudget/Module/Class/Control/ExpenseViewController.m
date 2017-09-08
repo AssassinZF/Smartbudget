@@ -12,6 +12,8 @@
 #import "OrderTableViewCell.h"
 #import "PullDwonView.h"
 #import "SpendView.h"
+#import "SawtoothView.h"
+#import "UIColor+AppConfigure.h"
 
 static NSString * const cellID = @"CELLID";
 static CGFloat cellHeight = 60;
@@ -40,12 +42,13 @@ static CGFloat cellHeight = 60;
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([OrderTableViewCell class]) bundle:nil] forCellReuseIdentifier:cellID];
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.rowHeight = cellHeight;
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+//    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self loadAllOrder];
     
     self.allMoneyLabel.text = [NSString stringWithFormat:@"%.2f",self.budgetItem.budgetMoney];
     self.outPlayMoneyLabel.text = [NSString stringWithFormat:@"-%.2f",self.budgetItem.outlayMoney];
     self.surplusLabel.text = [NSString stringWithFormat:@"%.2f",self.budgetItem.budgetMoney-self.budgetItem.outlayMoney];
+    self.surplusLabel.textColor = [UIColor moneyColor];
     
 }
 
@@ -108,16 +111,14 @@ static CGFloat cellHeight = 60;
 }
 
 -(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
-    UIView *view = [UIView new];
-    view.backgroundColor = [UIColor whiteColor];
-    view.frame = CGRectMake(0, 0, self.tableView.width, 20);
+    SawtoothView *view = [[SawtoothView alloc] initWithFrame:CGRectMake(0, 0, self.tableView.width, 20)];
     return view;
 }
 
 - (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     UIView *view = [UIView new];
-    view.backgroundColor = [UIColor whiteColor];
-    view.frame = CGRectMake(0, 0, self.tableView.width, 10);
+    view.backgroundColor = [AppSettingDefault share].backgroundColor;
+    view.frame = CGRectMake(0, 0, self.tableView.width, 1);
     return view;
 }
 
@@ -136,11 +137,25 @@ static CGFloat cellHeight = 60;
                 OrderModel *item = (OrderModel *)orderItem;
                 item.orderName = weakSelf.budgetItem.budgetName;
                 [item save];
+                [weakSelf updateTotalMoney:item];
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    [weakSelf.dataArray insertObject:item atIndex:0];
+                    [weakSelf.tableView beginUpdates];
+                    [weakSelf.tableView insertRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] withRowAnimation:UITableViewRowAnimationTop];
+                    [weakSelf.tableView endUpdates];
+
+                });
             }
         };
 
     }
     
+}
+
+-(void)updateTotalMoney:(OrderModel *)order{
+    self.budgetItem.modifyTime = order.creatTime;
+    self.budgetItem.outlayMoney += order.orderNumber;
+    self.surplusLabel.text = [NSString stringWithFormat:@"%.00f",self.budgetItem.budgetMoney - self.budgetItem.outlayMoney];
 }
 
 -(void)loadAllOrder{

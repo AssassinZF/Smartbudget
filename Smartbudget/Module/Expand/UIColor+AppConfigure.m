@@ -10,7 +10,7 @@
 
 @implementation UIColor (AppConfigure)
 +(instancetype)fontColor{
-    return [UIColor colorWithHexString:@"E6E5DB"];
+    return [UIColor colorWithHexString:@"C0C0BF"];
 }
 
 +(instancetype)moneyColor{

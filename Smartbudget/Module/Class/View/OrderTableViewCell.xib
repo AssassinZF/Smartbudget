@@ -6,8 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,25 +17,22 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="59.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hn0-GE-E9k">
-                        <rect key="frame" x="10" y="5" width="49.5" height="49.5"/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="hn0-GE-E9k" secondAttribute="height" multiplier="1:1" id="ZMT-ba-MHe"/>
-                        </constraints>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="49.5" placeholderIntrinsicHeight="49.5" translatesAutoresizingMaskIntoConstraints="NO" id="hn0-GE-E9k">
+                        <rect key="frame" x="25" y="5" width="49.5" height="49.5"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Peq-n3-qAK">
-                        <rect key="frame" x="69.5" y="5" width="42" height="21"/>
+                        <rect key="frame" x="84.5" y="13.5" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRc-cs-xoU">
-                        <rect key="frame" x="69" y="38.5" width="33" height="16"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <nil key="textColor"/>
+                        <rect key="frame" x="84" y="39.5" width="31" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.75294117647058822" green="0.75294117647058822" blue="0.74901960784313726" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xl3-wo-eXu">
@@ -47,14 +44,13 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="Peq-n3-qAK" firstAttribute="leading" secondItem="hn0-GE-E9k" secondAttribute="trailing" constant="10" id="2Jc-9D-XyG"/>
-                    <constraint firstItem="Peq-n3-qAK" firstAttribute="top" secondItem="hn0-GE-E9k" secondAttribute="top" id="3gH-aX-V3p"/>
-                    <constraint firstItem="pRc-cs-xoU" firstAttribute="bottom" secondItem="hn0-GE-E9k" secondAttribute="bottom" id="54J-Dg-lrG"/>
-                    <constraint firstItem="hn0-GE-E9k" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="HFL-da-Wdk"/>
+                    <constraint firstItem="Peq-n3-qAK" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" multiplier="0.8" id="DGg-6A-2Bb"/>
                     <constraint firstItem="pRc-cs-xoU" firstAttribute="leading" secondItem="hn0-GE-E9k" secondAttribute="trailing" constant="10" id="Ia4-eu-kG5"/>
-                    <constraint firstAttribute="bottom" secondItem="hn0-GE-E9k" secondAttribute="bottom" constant="5" id="MhY-Xc-y7P"/>
+                    <constraint firstItem="pRc-cs-xoU" firstAttribute="top" secondItem="Peq-n3-qAK" secondAttribute="bottom" constant="5" id="OB9-eS-Bzq"/>
                     <constraint firstAttribute="trailingMargin" secondItem="xl3-wo-eXu" secondAttribute="trailing" constant="10" id="ZkX-3B-wfB"/>
                     <constraint firstItem="xl3-wo-eXu" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="byc-ZY-KtX"/>
-                    <constraint firstItem="hn0-GE-E9k" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="hUK-mc-gPC"/>
+                    <constraint firstItem="hn0-GE-E9k" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="hUK-mc-gPC"/>
+                    <constraint firstItem="hn0-GE-E9k" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="tMh-hR-tau"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

@@ -25,4 +25,9 @@
 
 -(void)projectConfigure{
 }
+
+-(UIColor *)backgroundColor{
+    return RGB(249, 248, 238);
+}
+
 @end

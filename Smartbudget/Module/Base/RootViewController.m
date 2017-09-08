@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = RGB(249, 248, 238);
+    self.view.backgroundColor = [AppSettingDefault share].backgroundColor;
     
 }
 
