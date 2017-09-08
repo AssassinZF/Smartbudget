@@ -18,6 +18,7 @@
 		544394A71F60EAE800791FC3 /* SpendView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 544394A61F60EAE800791FC3 /* SpendView.xib */; };
 		544394AB1F6139EF00791FC3 /* LabelCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 544394A91F6139EF00791FC3 /* LabelCollectionViewCell.m */; };
 		544394AC1F6139EF00791FC3 /* LabelCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 544394AA1F6139EF00791FC3 /* LabelCollectionViewCell.xib */; };
+		544F8A5C1F623A440078B3D4 /* OrderTypeLabel.plist in Resources */ = {isa = PBXBuildFile; fileRef = 544F8A5B1F623A440078B3D4 /* OrderTypeLabel.plist */; };
 		54E1ACDF1F4D7DFA009A3FCE /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E1ACDC1F4D7DFA009A3FCE /* MainViewController.m */; };
 		54E1ACE31F4D7E26009A3FCE /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E1ACE11F4D7E26009A3FCE /* MainTableViewCell.m */; };
 		54E1ACE41F4D7E26009A3FCE /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54E1ACE21F4D7E26009A3FCE /* MainTableViewCell.xib */; };
@@ -79,6 +80,7 @@
 		544394A81F6139EF00791FC3 /* LabelCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelCollectionViewCell.h; sourceTree = "<group>"; };
 		544394A91F6139EF00791FC3 /* LabelCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelCollectionViewCell.m; sourceTree = "<group>"; };
 		544394AA1F6139EF00791FC3 /* LabelCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LabelCollectionViewCell.xib; sourceTree = "<group>"; };
+		544F8A5B1F623A440078B3D4 /* OrderTypeLabel.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OrderTypeLabel.plist; sourceTree = "<group>"; };
 		54E1ACDB1F4D7DFA009A3FCE /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		54E1ACDC1F4D7DFA009A3FCE /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		54E1ACE01F4D7E26009A3FCE /* MainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewCell.h; sourceTree = "<group>"; };
@@ -360,6 +362,7 @@
 			children = (
 				AB066DAF1F4D333500378D80 /* UIColor+AppConfigure.h */,
 				AB066DB01F4D333500378D80 /* UIColor+AppConfigure.m */,
+				544F8A5B1F623A440078B3D4 /* OrderTypeLabel.plist */,
 			);
 			path = Expand;
 			sourceTree = "<group>";
@@ -525,6 +528,7 @@
 				544394A71F60EAE800791FC3 /* SpendView.xib in Resources */,
 				AB066D6C1F4D25D400378D80 /* Main.storyboard in Resources */,
 				54E1ACEF1F4EB49A009A3FCE /* AddBudgetViewController.xib in Resources */,
+				544F8A5C1F623A440078B3D4 /* OrderTypeLabel.plist in Resources */,
 				5443949F1F5EBB2D00791FC3 /* OrderTableViewCell.xib in Resources */,
 				544394AC1F6139EF00791FC3 /* LabelCollectionViewCell.xib in Resources */,
 				5443949A1F5EB06700791FC3 /* ExpenseViewController.xib in Resources */,

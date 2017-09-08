@@ -14,6 +14,13 @@
 }
 
 +(instancetype)moneyColor{
-    return RGB(245, 67, 86);
+    return [UIColor colorWithHexString:@"F7516B"];
 }
+
++(instancetype)grayColor{
+    return [UIColor colorWithHexString:@"C1B1AF"];
+}
+
+
+
 @end

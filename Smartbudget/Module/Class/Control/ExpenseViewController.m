@@ -40,6 +40,7 @@ static CGFloat cellHeight = 60;
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([OrderTableViewCell class]) bundle:nil] forCellReuseIdentifier:cellID];
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.rowHeight = cellHeight;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self loadAllOrder];
     
     self.allMoneyLabel.text = [NSString stringWithFormat:@"%.2f",self.budgetItem.budgetMoney];

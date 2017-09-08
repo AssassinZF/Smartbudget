@@ -12,8 +12,14 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
-    self.backgroundColor = [UIColor purpleColor];
+    UIView *background = [UIView new];
+    background.backgroundColor = [UIColor purpleColor];
+    self.selectedBackgroundView = background;
 }
 
+-(void)updateCellDictory:(NSDictionary *)dic{
+    self.iconImageView.image = [UIImage imageNamed:dic[@"icon"]];
+    self.labelName.text = dic[@"name"];
+    
+}
 @end

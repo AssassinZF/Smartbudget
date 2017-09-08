@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *labelTextField;
 @property (weak, nonatomic) IBOutlet UIButton *completeBtn;
 @property (weak, nonatomic) IBOutlet UIView *backgroundView;
+@property (nonatomic, strong)NSArray *dataArray;
 
 @end
 
@@ -112,7 +113,7 @@
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 20;
+    return self.dataArray.count;
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -121,6 +122,8 @@
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     LabelCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+    NSDictionary *item = self.dataArray[indexPath.row];
+    [cell updateCellDictory:item];
     return cell;
 }
 
@@ -131,6 +134,14 @@
         self.pageControl.currentPage = 1;
     }
 
+}
+
+-(NSArray *)dataArray{
+    if (!_dataArray) {
+        NSString *fileName = [[NSBundle mainBundle] pathForResource:@"OrderTypeLabel" ofType:@"plist"];
+        _dataArray = [NSArray arrayWithContentsOfFile:fileName];
+    }
+    return _dataArray;
 }
 
 

@@ -14,7 +14,7 @@ pod 'pop'
 pod 'SVProgressHUD'
 pod 'SCLAlertView-Objective-C'
 pod 'CYLTableViewPlaceHolder'
-
+#pod 'Charts'
 
 
   target 'SmartbudgetTests' do
