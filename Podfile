@@ -14,8 +14,7 @@ pod 'pop'
 pod 'SVProgressHUD'
 pod 'SCLAlertView-Objective-C'
 pod 'CYLTableViewPlaceHolder'
-#pod 'Charts'
-
+pod 'PNChart'
 
   target 'SmartbudgetTests' do
     inherit! :search_paths

@@ -14,6 +14,7 @@
 #import "SpendView.h"
 #import "SawtoothView.h"
 #import "UIColor+AppConfigure.h"
+#import "ChartViewController.h"
 
 static NSString * const cellID = @"CELLID";
 static CGFloat cellHeight = 60;
@@ -50,6 +51,17 @@ static CGFloat cellHeight = 60;
     self.surplusLabel.text = [NSString stringWithFormat:@"%.2f",self.budgetItem.budgetMoney-self.budgetItem.outlayMoney];
     self.surplusLabel.textColor = [UIColor moneyColor];
     
+    [self addRightBarItem:nil image:[UIImage imageNamed:@"right_chart"]];
+    
+}
+
+-(void)handleNaviBarRightBtnClick:(id)sender{
+    //click right button
+    ChartViewController *vc = [[ChartViewController alloc] init];
+    vc.budgetModel = self.budgetItem;
+    vc.orderList = self.dataArray;
+    [self.navigationController pushViewController:vc animated:YES];
+
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -91,6 +103,9 @@ static CGFloat cellHeight = 60;
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         //delete cell
+        OrderModel *order = self.dataArray[indexPath.row];
+        self.budgetItem.outlayMoney -= order.orderNumber;
+        [self.budgetItem update];
         [self.dataArray removeObjectAtIndex:indexPath.row];
         [self.tableView beginUpdates];
         [self.tableView deleteRowAtIndexPath:indexPath withRowAnimation:UITableViewRowAnimationLeft];

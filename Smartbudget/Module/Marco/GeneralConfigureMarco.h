@@ -52,4 +52,7 @@
 
 #define NavBar_H self.navigationController.navigationBar.height
 
+#define LabelAssetList [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"OrderTypeLabel" ofType:@"plist"]];
+
+
 #endif /* GeneralConfigureMarco_h */

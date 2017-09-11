@@ -4,9 +4,12 @@ PODS:
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
   - Masonry (1.0.2)
+  - PNChart (0.8.9):
+    - UICountingLabel (~> 1.2.0)
   - pop (1.0.9)
   - SCLAlertView-Objective-C (1.1.2)
   - SVProgressHUD (2.1.2)
+  - UICountingLabel (1.2.0)
   - YYCategories (1.0.4):
     - YYCategories/no-arc (= 1.0.4)
   - YYCategories/no-arc (1.0.4)
@@ -15,6 +18,7 @@ DEPENDENCIES:
   - CYLTableViewPlaceHolder
   - FMDB
   - Masonry (~> 1.0.2)
+  - PNChart
   - pop
   - SCLAlertView-Objective-C
   - SVProgressHUD
@@ -24,11 +28,13 @@ SPEC CHECKSUMS:
   CYLTableViewPlaceHolder: 44075c119aab78bbc514c75d771d6565e19938e8
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  PNChart: 84774d225c2126ded6c93d4dbe6ae98c3a73c2d2
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   SCLAlertView-Objective-C: 0e54351fa4f98a5c7c6ad3727e6dbb46784534e5
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
 
-PODFILE CHECKSUM: b5ff1388595a29a8bd4617b771665c32c0931d07
+PODFILE CHECKSUM: 98abcec1bd42cbb68104ef84ffd48d4df7934a16
 
 COCOAPODS: 1.2.1

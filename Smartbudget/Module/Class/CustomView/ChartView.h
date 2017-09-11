@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <PNChart.h>
 
 @interface ChartView : UIView
-
+@property (nonatomic, strong)NSArray <PNPieChartDataItem *>*dataArray;
 @end

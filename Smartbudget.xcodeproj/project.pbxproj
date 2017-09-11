@@ -22,6 +22,10 @@
 		544F8A5F1F629D4B0078B3D4 /* NSArray+PathResouce.m in Sources */ = {isa = PBXBuildFile; fileRef = 544F8A5E1F629D4B0078B3D4 /* NSArray+PathResouce.m */; };
 		544F8A621F62A8E70078B3D4 /* SawtoothView.m in Sources */ = {isa = PBXBuildFile; fileRef = 544F8A611F62A8E70078B3D4 /* SawtoothView.m */; };
 		544F8A651F62B4990078B3D4 /* ChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 544F8A641F62B4990078B3D4 /* ChartView.m */; };
+		54A69D931F667E89006970B8 /* ChartTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A69D911F667E89006970B8 /* ChartTableViewCell.m */; };
+		54A69D941F667E89006970B8 /* ChartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54A69D921F667E89006970B8 /* ChartTableViewCell.xib */; };
+		54C4F3AA1F666C16005F27B3 /* ChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C4F3A81F666C16005F27B3 /* ChartViewController.m */; };
+		54C4F3AB1F666C16005F27B3 /* ChartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54C4F3A91F666C16005F27B3 /* ChartViewController.xib */; };
 		54E1ACDF1F4D7DFA009A3FCE /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E1ACDC1F4D7DFA009A3FCE /* MainViewController.m */; };
 		54E1ACE31F4D7E26009A3FCE /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E1ACE11F4D7E26009A3FCE /* MainTableViewCell.m */; };
 		54E1ACE41F4D7E26009A3FCE /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54E1ACE21F4D7E26009A3FCE /* MainTableViewCell.xib */; };
@@ -90,6 +94,12 @@
 		544F8A611F62A8E70078B3D4 /* SawtoothView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SawtoothView.m; sourceTree = "<group>"; };
 		544F8A631F62B4990078B3D4 /* ChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartView.h; sourceTree = "<group>"; };
 		544F8A641F62B4990078B3D4 /* ChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartView.m; sourceTree = "<group>"; };
+		54A69D901F667E89006970B8 /* ChartTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartTableViewCell.h; sourceTree = "<group>"; };
+		54A69D911F667E89006970B8 /* ChartTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartTableViewCell.m; sourceTree = "<group>"; };
+		54A69D921F667E89006970B8 /* ChartTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChartTableViewCell.xib; sourceTree = "<group>"; };
+		54C4F3A71F666C16005F27B3 /* ChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartViewController.h; sourceTree = "<group>"; };
+		54C4F3A81F666C16005F27B3 /* ChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartViewController.m; sourceTree = "<group>"; };
+		54C4F3A91F666C16005F27B3 /* ChartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChartViewController.xib; sourceTree = "<group>"; };
 		54E1ACDB1F4D7DFA009A3FCE /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		54E1ACDC1F4D7DFA009A3FCE /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		54E1ACE01F4D7E26009A3FCE /* MainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewCell.h; sourceTree = "<group>"; };
@@ -235,6 +245,9 @@
 				544394961F5EB06600791FC3 /* ExpenseViewController.h */,
 				544394971F5EB06600791FC3 /* ExpenseViewController.m */,
 				544394981F5EB06600791FC3 /* ExpenseViewController.xib */,
+				54C4F3A71F666C16005F27B3 /* ChartViewController.h */,
+				54C4F3A81F666C16005F27B3 /* ChartViewController.m */,
+				54C4F3A91F666C16005F27B3 /* ChartViewController.xib */,
 			);
 			path = Control;
 			sourceTree = "<group>";
@@ -260,6 +273,9 @@
 				544394A81F6139EF00791FC3 /* LabelCollectionViewCell.h */,
 				544394A91F6139EF00791FC3 /* LabelCollectionViewCell.m */,
 				544394AA1F6139EF00791FC3 /* LabelCollectionViewCell.xib */,
+				54A69D901F667E89006970B8 /* ChartTableViewCell.h */,
+				54A69D911F667E89006970B8 /* ChartTableViewCell.m */,
+				54A69D921F667E89006970B8 /* ChartTableViewCell.xib */,
 			);
 			name = Cell;
 			path = View;
@@ -537,6 +553,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54C4F3AB1F666C16005F27B3 /* ChartViewController.xib in Resources */,
 				AB066D711F4D25D400378D80 /* LaunchScreen.storyboard in Resources */,
 				AB066D6E1F4D25D400378D80 /* Assets.xcassets in Resources */,
 				54E1ACE41F4D7E26009A3FCE /* MainTableViewCell.xib in Resources */,
@@ -544,6 +561,7 @@
 				AB066D6C1F4D25D400378D80 /* Main.storyboard in Resources */,
 				54E1ACEF1F4EB49A009A3FCE /* AddBudgetViewController.xib in Resources */,
 				544F8A5C1F623A440078B3D4 /* OrderTypeLabel.plist in Resources */,
+				54A69D941F667E89006970B8 /* ChartTableViewCell.xib in Resources */,
 				5443949F1F5EBB2D00791FC3 /* OrderTableViewCell.xib in Resources */,
 				544394AC1F6139EF00791FC3 /* LabelCollectionViewCell.xib in Resources */,
 				5443949A1F5EB06700791FC3 /* ExpenseViewController.xib in Resources */,
@@ -713,8 +731,10 @@
 				544F8A621F62A8E70078B3D4 /* SawtoothView.m in Sources */,
 				540E2CF61F57F15A00A8D85F /* JKDBHelper.m in Sources */,
 				AB066DAD1F4D2D4D00378D80 /* AppSettingDefault.m in Sources */,
+				54A69D931F667E89006970B8 /* ChartTableViewCell.m in Sources */,
 				AB066D631F4D25D400378D80 /* main.m in Sources */,
 				544394A21F5FD06C00791FC3 /* PullDwonView.m in Sources */,
+				54C4F3AA1F666C16005F27B3 /* ChartViewController.m in Sources */,
 				540E2CF71F57F15A00A8D85F /* JKDBModel.m in Sources */,
 				54E1ACE31F4D7E26009A3FCE /* MainTableViewCell.m in Sources */,
 				544F8A5F1F629D4B0078B3D4 /* NSArray+PathResouce.m in Sources */,
