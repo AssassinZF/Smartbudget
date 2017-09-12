@@ -10,6 +10,7 @@
 #import "ChartView.h"
 #import "ChartTableViewCell.h"
 #import "BudgetModel.h"
+#import "UIColor+AppConfigure.h"
 
 @interface ChartViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
@@ -54,12 +55,13 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ChartTableViewCell class]) bundle:nil] forCellReuseIdentifier:@"cell"];
-    self.tableView.rowHeight = 50;
+    self.tableView.rowHeight = 60;
     
     
     [self.view bringSubviewToFront:self.closeButton];
     
     self.allOutplayMoneyLabel.text = [NSString stringWithFormat:@"-%.2f",self.budgetModel.outlayMoney];
+    self.allOutplayMoneyLabel.textColor = [UIColor moneyColor];
     
     
 }
