@@ -31,8 +31,6 @@
     if (budgetModel.outlayMoney > 0.00) {
         self.outPlayMoneyLabel.text = [NSString stringWithFormat:@"-%.2f",budgetModel.outlayMoney];
     }
-    
-    
 }
 
 - (void)awakeFromNib {

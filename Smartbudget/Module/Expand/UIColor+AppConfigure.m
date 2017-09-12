@@ -17,7 +17,7 @@
     return [UIColor colorWithHexString:@"F7516B"];
 }
 
-+(instancetype)grayColor{
++(instancetype)_grayColor;{
     return [UIColor colorWithHexString:@"C1B1AF"];
 }
 

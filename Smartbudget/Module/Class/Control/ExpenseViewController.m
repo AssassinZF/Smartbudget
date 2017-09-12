@@ -43,13 +43,11 @@ static CGFloat cellHeight = 60;
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([OrderTableViewCell class]) bundle:nil] forCellReuseIdentifier:cellID];
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.rowHeight = cellHeight;
-//    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self loadAllOrder];
     
     self.allMoneyLabel.text = [NSString stringWithFormat:@"%.2f",self.budgetItem.budgetMoney];
     self.outPlayMoneyLabel.text = [NSString stringWithFormat:@"-%.2f",self.budgetItem.outlayMoney];
     self.surplusLabel.text = [NSString stringWithFormat:@"%.2f",self.budgetItem.budgetMoney-self.budgetItem.outlayMoney];
-    self.surplusLabel.textColor = [UIColor moneyColor];
     
     [self addRightBarItem:nil image:[UIImage imageNamed:@"right_chart"]];
     
@@ -106,6 +104,9 @@ static CGFloat cellHeight = 60;
         OrderModel *order = self.dataArray[indexPath.row];
         self.budgetItem.outlayMoney -= order.orderNumber;
         [self.budgetItem update];
+        self.outPlayMoneyLabel.text = [NSString stringWithFormat:@"-%.2f",self.budgetItem.outlayMoney];
+        self.surplusLabel.text = [NSString stringWithFormat:@"%.2f",self.budgetItem.budgetMoney-self.budgetItem.outlayMoney];
+        [order deleteObject];
         [self.dataArray removeObjectAtIndex:indexPath.row];
         [self.tableView beginUpdates];
         [self.tableView deleteRowAtIndexPath:indexPath withRowAnimation:UITableViewRowAnimationLeft];
@@ -153,7 +154,7 @@ static CGFloat cellHeight = 60;
                 item.orderName = weakSelf.budgetItem.budgetName;
                 [item save];
                 [weakSelf updateTotalMoney:item];
-                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                     [weakSelf.dataArray insertObject:item atIndex:0];
                     [weakSelf.tableView beginUpdates];
                     [weakSelf.tableView insertRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] withRowAnimation:UITableViewRowAnimationTop];

@@ -11,10 +11,13 @@
 #import "ChartTableViewCell.h"
 #import "BudgetModel.h"
 #import "UIColor+AppConfigure.h"
+#import "AppSettingDefault.h"
+#import "OrderDetailTableViewCell.h"
 
 @interface ChartViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     ChartView *chartView;
+    NSInteger selectIndex;
 }
 @property (weak, nonatomic) IBOutlet UILabel *allOutplayLabel;
 @property (weak, nonatomic) IBOutlet UILabel *allOutplayMoneyLabel;
@@ -22,6 +25,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong)NSMutableArray *dataArray;
 @property (weak, nonatomic) IBOutlet UIButton *closeButton;
+@property (nonatomic, strong)UITableView *detailTableView;
 
 @end
 
@@ -63,6 +67,7 @@
     self.allOutplayMoneyLabel.text = [NSString stringWithFormat:@"-%.2f",self.budgetModel.outlayMoney];
     self.allOutplayMoneyLabel.textColor = [UIColor moneyColor];
     
+    selectIndex = -1;
     
 }
 
@@ -75,16 +80,57 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    if (tableView == _detailTableView && selectIndex>-1) {
+        NSMutableArray *itemArray = self.dataArray[selectIndex];
+        return itemArray.count;
+    }
     return self.dataArray.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (tableView == _detailTableView && selectIndex>-1) {
+        OrderDetailTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"detailCell"];
+        NSMutableArray *itemArray = self.dataArray[selectIndex];
+        OrderModel *item = itemArray[indexPath.row];
+        cell.timeLabel.text = item.creatTime;
+        cell.timeLabel.textColor = [UIColor _grayColor];
+        ChartTableViewCell *preCell = (ChartTableViewCell *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:selectIndex inSection:0]];
+        cell.typeNameLabel.text = preCell.labelName.text;
+        cell.moneyLabel.text = [NSString stringWithFormat:@"-%.2f",item.orderNumber];
+        cell.moneyLabel.textColor = [UIColor moneyColor];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        return cell;
+    }
     ChartTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     [cell updateCell:self.dataArray[indexPath.row] with:self.budgetModel index:indexPath.row];
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (tableView == _detailTableView) {
+        return;
+    }
+    selectIndex = indexPath.row;
+    if (!_detailTableView) {
+        [self.detailTableView layoutIfNeeded];
+        [UIView animateWithDuration:0.5 animations:^{
+            [self.detailTableView mas_updateConstraints:^(MASConstraintMaker *make) {
+                make.left.equalTo(self.view).offset(110);
+            }];
+            [self.detailTableView layoutIfNeeded];
+        } completion:^(BOOL finished) {
+            UIView *lineView = [[UIView alloc] init];
+            lineView.backgroundColor = [UIColor _grayColor];
+            [self.view addSubview:lineView];
+            [lineView mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.left.equalTo(self.detailTableView);
+                make.top.bottom.equalTo(self.detailTableView);
+                make.width.mas_equalTo(1);
+            }];
+        }];
+    }
+    [self.detailTableView reloadData];
+
     
 }
 
@@ -112,6 +158,27 @@
         }
     }
     return _dataArray;
+}
+
+-(UITableView *)detailTableView{
+    if (!_detailTableView) {
+        _detailTableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+        _detailTableView.delegate = self;
+        _detailTableView.dataSource = self;
+        _detailTableView.backgroundColor = [AppSettingDefault share].backgroundColor;
+        _detailTableView.rowHeight = 60;
+        [_detailTableView registerNib:[UINib nibWithNibName:NSStringFromClass([OrderDetailTableViewCell class]) bundle:nil] forCellReuseIdentifier:@"detailCell"];
+        _detailTableView.tableFooterView = [UIView new];
+        [self.view addSubview:self.detailTableView];
+        [self.detailTableView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.tableView);
+            make.bottom.equalTo(self.tableView);
+            make.right.equalTo(self.view);
+            make.left.equalTo(self.view.mas_left).offset(kScreenWidth);
+        }];
+
+    }
+    return _detailTableView;
 }
 
 @end
