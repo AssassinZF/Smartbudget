@@ -67,7 +67,7 @@
                                 <constraint firstAttribute="height" constant="30" id="sxU-53-Z2t"/>
                                 <constraint firstAttribute="width" constant="100" id="xS3-EZ-p0o"/>
                             </constraints>
-                            <state key="normal" title="Complete"/>
+                            <state key="normal" title="完  成"/>
                             <connections>
                                 <action selector="clickDone:" destination="iN0-l3-epB" eventType="touchUpInside" id="51t-nK-UR1"/>
                             </connections>

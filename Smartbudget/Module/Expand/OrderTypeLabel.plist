@@ -16,7 +16,7 @@
 		<key>name</key>
 		<string>用餐</string>
 		<key>color</key>
-		<string>FAB450</string>
+		<string>43D077</string>
 		<key>iconHighlight</key>
 		<string>label_yc_h</string>
 		<key>icon</key>
@@ -26,7 +26,7 @@
         <key>name</key>
         <string>饮料</string>
         <key>color</key>
-        <string>FAB450</string>
+        <string>3BABE5</string>
         <key>iconHighlight</key>
         <string>label_drink_h</string>
         <key>icon</key>
@@ -36,7 +36,7 @@
         <key>name</key>
         <string>交通</string>
         <key>color</key>
-        <string>FAB450</string>
+        <string>CB70E5</string>
         <key>iconHighlight</key>
         <string>label_jt_h</string>
         <key>icon</key>
@@ -46,7 +46,7 @@
         <key>name</key>
         <string>住宿</string>
         <key>color</key>
-        <string>FAB450</string>
+        <string>402E2E</string>
         <key>iconHighlight</key>
         <string>label_hotal_h</string>
         <key>icon</key>
@@ -56,7 +56,7 @@
         <key>name</key>
         <string>购物</string>
         <key>color</key>
-        <string>FAB450</string>
+        <string>F75E6B</string>
         <key>iconHighlight</key>
         <string>label_shopping_h</string>
         <key>icon</key>
@@ -76,7 +76,7 @@
         <key>name</key>
         <string>礼物</string>
         <key>color</key>
-        <string>FAB450</string>
+        <string>4AF2A1</string>
         <key>iconHighlight</key>
         <string>label_gift_h</string>
         <key>icon</key>
@@ -86,7 +86,7 @@
         <key>name</key>
         <string>酒水</string>
         <key>color</key>
-        <string>FAB450</string>
+        <string>5CC9F5</string>
         <key>iconHighlight</key>
         <string>label_gift_h</string>
         <key>icon</key>
@@ -96,7 +96,7 @@
         <key>name</key>
         <string>娱乐</string>
         <key>color</key>
-        <string>FAB450</string>
+        <string>F78AE0</string>
         <key>iconHighlight</key>
         <string>label_yule_h</string>
         <key>icon</key>
@@ -106,7 +106,7 @@
         <key>name</key>
         <string>电影</string>
         <key>color</key>
-        <string>FAB450</string>
+        <string>6638F0</string>
         <key>iconHighlight</key>
         <string>label_movie_h</string>
         <key>icon</key>

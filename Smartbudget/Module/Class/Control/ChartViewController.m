@@ -52,7 +52,23 @@
     [chartView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.topChartBackView).with.insets(UIEdgeInsetsMake(0, 40, 0, 40));
     }];
-    chartView.dataArray = nil;
+    
+    NSArray *labelArray = LabelAssetList;
+
+    NSMutableArray *tableArray = @[].mutableCopy;
+    for (NSArray * itemArray in self.dataArray) {
+        CGFloat moneySum = 0.00;
+        NSDictionary *dic = nil;
+        for (OrderModel *order in itemArray) {
+            moneySum += order.orderNumber;
+            if (!dic) {
+                dic = labelArray[order.orderType];
+            }
+        }
+        PNPieChartDataItem *item = [PNPieChartDataItem dataItemWithValue:moneySum color:[UIColor colorWithHexString:dic[@"color"]] description:nil];
+        [tableArray addObject:item];
+    }
+    chartView.dataArray = tableArray;
     
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.tableFooterView = [UIView new];
@@ -115,7 +131,7 @@
         [self.detailTableView layoutIfNeeded];
         [UIView animateWithDuration:0.5 animations:^{
             [self.detailTableView mas_updateConstraints:^(MASConstraintMaker *make) {
-                make.left.equalTo(self.view).offset(110);
+                make.left.equalTo(self.view).offset(120);
             }];
             [self.detailTableView layoutIfNeeded];
         } completion:^(BOOL finished) {

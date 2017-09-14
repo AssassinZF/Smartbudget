@@ -55,6 +55,9 @@ static CGFloat cellHeight = 60;
 
 -(void)handleNaviBarRightBtnClick:(id)sender{
     //click right button
+    if (self.budgetItem.outlayMoney<=0.00) {
+        return;
+    }
     ChartViewController *vc = [[ChartViewController alloc] init];
     vc.budgetModel = self.budgetItem;
     vc.orderList = self.dataArray;

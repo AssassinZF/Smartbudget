@@ -13,12 +13,14 @@
 #import "AddBudgetViewController.h"
 #import "BudgetModel.h"
 #import "ExpenseViewController.h"
+#import "CYLTableViewPlaceHolder.h"
+
 
 static NSString * const cellID = @"CELLID";
 static CGFloat cellHeight = 80;
 static CGFloat addButtonW = 50;
 
-@interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface MainViewController ()<UITableViewDelegate,UITableViewDataSource,CYLTableViewPlaceHolderDelegate>
 {
     UIButton *addButton;//加号
     UIView *roundView;//加号放大背景view
@@ -131,10 +133,12 @@ static CGFloat addButtonW = 50;
         //delete cell
         BudgetModel *item = self.dataArray[indexPath.row];
         [item deleteObject];
+        [OrderModel deleteObjectsByCriteria:[NSString stringWithFormat:@"WHERE orderName=\"%@\"",item.budgetName]];
         [self.dataArray removeObjectAtIndex:indexPath.row];
         [self.tableView beginUpdates];
         [self.tableView deleteRowAtIndexPath:indexPath withRowAnimation:UITableViewRowAnimationLeft];
         [self.tableView endUpdates];
+        [self.tableView cyl_reloadData];
 
     }
 }
@@ -143,14 +147,24 @@ static CGFloat addButtonW = 50;
     return @"删除";
 }
 
-
+#pragma mark - CYLTableViewPlaceHolderDelegate
+-(UIView *)makePlaceHolderView{
+    UIView *view = [[UIView alloc] init];
+    view.backgroundColor = [UIColor clearColor];
+    UIImage *placeHolder = [UIImage imageNamed:@"PlaceHolder"];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:placeHolder];
+    imageView.bounds = CGRectMake(0, 0, placeHolder.size.width, placeHolder.size.height);
+    imageView.center = CGPointMake(kScreenWidth/2, 200);
+    [view addSubview:imageView];
+    return view;
+}
 
 #pragma mark - PriveMethod
 
 -(void)loadLocalBudgets{
     NSArray *budgets = [BudgetModel findAll];
     self.dataArray = budgets.mutableCopy;
-    [self.tableView reloadData];
+    [self.tableView cyl_reloadData];
     if (self.tableView.contentSize.height >= self.tableView.height) {
         CGSize size = self.tableView.contentSize;
         size.height += cellHeight;

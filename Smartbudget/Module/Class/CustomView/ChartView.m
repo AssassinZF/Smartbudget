@@ -27,12 +27,7 @@
 -(void)setDataArray:(NSArray<PNPieChartDataItem *> *)dataArray{
     _dataArray = dataArray;
     
-    NSArray *items = @[[PNPieChartDataItem dataItemWithValue:10 color:PNLightGreen],
-                       [PNPieChartDataItem dataItemWithValue:20 color:PNFreshGreen description:@"WWDC"],
-                       [PNPieChartDataItem dataItemWithValue:40 color:PNDeepGreen description:@"GOOG I/O"],
-                       ];
-    
-    self.pieChart = [[PNPieChart alloc] initWithFrame:CGRectMake((CGFloat) (self.width / 2.0 - 100), 20, 200.0, 200.0) items:items];
+    self.pieChart = [[PNPieChart alloc] initWithFrame:CGRectMake((CGFloat) (self.width / 2.0 - 100), 20, 200.0, 200.0) items:_dataArray];
     self.pieChart.descriptionTextColor = [UIColor whiteColor];
     self.pieChart.descriptionTextFont = [UIFont fontWithName:@"Avenir-Medium" size:11.0];
     self.pieChart.descriptionTextShadowColor = [UIColor clearColor];

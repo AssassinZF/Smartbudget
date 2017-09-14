@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -26,13 +27,13 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82I-3Z-OAi">
-                        <rect key="frame" x="13" y="21" width="37.5" height="18"/>
+                        <rect key="frame" x="13" y="26.5" width="37.5" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2XD-eM-pPp">
-                        <rect key="frame" x="265" y="19.5" width="42" height="21"/>
+                        <rect key="frame" x="265" y="25" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -43,8 +44,8 @@
                     <constraint firstItem="0Or-XC-HEv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="51v-3G-EQ0"/>
                     <constraint firstItem="82I-3Z-OAi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="MT2-N4-aOb"/>
                     <constraint firstItem="0Or-XC-HEv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="qFg-Ec-dwf"/>
-                    <constraint firstItem="2XD-eM-pPp" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="sma-Wo-1gm"/>
-                    <constraint firstItem="82I-3Z-OAi" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ugX-hf-PsL"/>
+                    <constraint firstItem="2XD-eM-pPp" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" multiplier="1.2" id="sma-Wo-1gm"/>
+                    <constraint firstItem="82I-3Z-OAi" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" multiplier="1.2" id="ugX-hf-PsL"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

@@ -22,6 +22,8 @@
 		544F8A5F1F629D4B0078B3D4 /* NSArray+PathResouce.m in Sources */ = {isa = PBXBuildFile; fileRef = 544F8A5E1F629D4B0078B3D4 /* NSArray+PathResouce.m */; };
 		544F8A621F62A8E70078B3D4 /* SawtoothView.m in Sources */ = {isa = PBXBuildFile; fileRef = 544F8A611F62A8E70078B3D4 /* SawtoothView.m */; };
 		544F8A651F62B4990078B3D4 /* ChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 544F8A641F62B4990078B3D4 /* ChartView.m */; };
+		5487BCCE1F6A235C00612746 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5487BCCD1F6A235C00612746 /* AppIcon.xcassets */; };
+		5487BCD51F6A2BE200612746 /* launchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 5487BCD41F6A2BE200612746 /* launchImage.png */; };
 		54A69D931F667E89006970B8 /* ChartTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A69D911F667E89006970B8 /* ChartTableViewCell.m */; };
 		54A69D941F667E89006970B8 /* ChartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54A69D921F667E89006970B8 /* ChartTableViewCell.xib */; };
 		54A69D981F6788F6006970B8 /* OrderDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A69D961F6788F6006970B8 /* OrderDetailTableViewCell.m */; };
@@ -96,6 +98,8 @@
 		544F8A611F62A8E70078B3D4 /* SawtoothView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SawtoothView.m; sourceTree = "<group>"; };
 		544F8A631F62B4990078B3D4 /* ChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartView.h; sourceTree = "<group>"; };
 		544F8A641F62B4990078B3D4 /* ChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartView.m; sourceTree = "<group>"; };
+		5487BCCD1F6A235C00612746 /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
+		5487BCD41F6A2BE200612746 /* launchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchImage.png; sourceTree = "<group>"; };
 		54A69D901F667E89006970B8 /* ChartTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartTableViewCell.h; sourceTree = "<group>"; };
 		54A69D911F667E89006970B8 /* ChartTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartTableViewCell.m; sourceTree = "<group>"; };
 		54A69D921F667E89006970B8 /* ChartTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChartTableViewCell.xib; sourceTree = "<group>"; };
@@ -237,6 +241,14 @@
 				544F8A641F62B4990078B3D4 /* ChartView.m */,
 			);
 			path = CustomView;
+			sourceTree = "<group>";
+		};
+		5487BCD11F6A28E600612746 /* ImageResource */ = {
+			isa = PBXGroup;
+			children = (
+				5487BCD41F6A2BE200612746 /* launchImage.png */,
+			);
+			path = ImageResource;
 			sourceTree = "<group>";
 		};
 		54E1ACDA1F4D7DFA009A3FCE /* Control */ = {
@@ -417,21 +429,15 @@
 		AB066D9A1F4D296E00378D80 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				AB066D9C1F4D29AE00378D80 /* Image */,
+				5487BCD11F6A28E600612746 /* ImageResource */,
 				AB066D6A1F4D25D400378D80 /* Main.storyboard */,
+				5487BCCD1F6A235C00612746 /* AppIcon.xcassets */,
 				AB066D6D1F4D25D400378D80 /* Assets.xcassets */,
 				AB066D6F1F4D25D400378D80 /* LaunchScreen.storyboard */,
 				AB066D721F4D25D400378D80 /* Info.plist */,
 				AB066D9D1F4D29EA00378D80 /* PrefixHeader.pch */,
 			);
 			path = Resource;
-			sourceTree = "<group>";
-		};
-		AB066D9C1F4D29AE00378D80 /* Image */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Image;
 			sourceTree = "<group>";
 		};
 		AB066D9E1F4D2B6200378D80 /* General */ = {
@@ -561,10 +567,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5487BCD51F6A2BE200612746 /* launchImage.png in Resources */,
 				54C4F3AB1F666C16005F27B3 /* ChartViewController.xib in Resources */,
 				AB066D711F4D25D400378D80 /* LaunchScreen.storyboard in Resources */,
 				AB066D6E1F4D25D400378D80 /* Assets.xcassets in Resources */,
 				54E1ACE41F4D7E26009A3FCE /* MainTableViewCell.xib in Resources */,
+				5487BCCE1F6A235C00612746 /* AppIcon.xcassets in Resources */,
 				544394A71F60EAE800791FC3 /* SpendView.xib in Resources */,
 				AB066D6C1F4D25D400378D80 /* Main.storyboard in Resources */,
 				54E1ACEF1F4EB49A009A3FCE /* AddBudgetViewController.xib in Resources */,
@@ -921,6 +929,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zf.Smartbudget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -936,6 +945,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zf.Smartbudget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
